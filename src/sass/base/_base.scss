@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 56.25%;
+  }
+  @media only screen and (min-width: 1400px) {
+    font-size: 75%;
+  }
+}
