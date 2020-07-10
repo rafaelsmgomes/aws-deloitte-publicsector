@@ -27,13 +27,42 @@ module.exports = {
       }
     },
     {
+      test: /\.ttf|eot|woff|woff2|svg$/,
+      exclude: /\node_modules/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'fonts/'
+      }
+    },
+    {
       test: /\.s[ac]ss$/i,
-      loader: [
+      use: [
         'style-loader',
-        'css-loader',
-        'sass-loader'
-      ]
-    }]
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true
+          }
+        },
+        {
+          loader: 'resolve-url-loader',
+          options: {
+            debug: true
+          }
+        },
+
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+          }
+        }
+
+      ],
+    }
+
+    ]
   },
   // resolve: {
   //   extensions: ['.js', '.scss'],

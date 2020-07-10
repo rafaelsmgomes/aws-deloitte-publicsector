@@ -1,5 +1,15 @@
 @font-face {
   font-family: "EmberReg";
-  src: url("./fonts/AmazonEmberDisplay_Rg.ttf");
+  src: url("../../fonts/AmazonEmberDisplay_Rg.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "EmberLt";
+  src: url("../../fonts/AmazonEmberDisplay_Lt.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "EmberBd";
+  src: url("../../fonts/AmazonEmberDisplay_Bd.ttf");
   font-weight: normal;
 }
