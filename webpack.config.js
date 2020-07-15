@@ -27,12 +27,30 @@ module.exports = {
       }
     },
     {
-      test: /\.ttf|eot|woff|woff2|svg$/,
+      test: /\.ttf|eot|woff|woff2$/,
       exclude: /\node_modules/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
         outputPath: 'fonts/'
+      }
+    },
+    {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      exclude: /\node_modules/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'assets/'
+      }
+    },
+    {
+      test: /\.png$/,
+      exclude: /\node_modules/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'assets/'
       }
     },
     {

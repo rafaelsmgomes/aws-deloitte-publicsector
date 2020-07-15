@@ -6,12 +6,17 @@
 @import "./base/base";
 @import "./base/typography";
 
-// @import "./components/";
+@import "./components/header";
+@import "./components/industry";
+@import "./components/intro";
 
 @import "./layout/footer";
 @import "./layout/grid";
-@import "./layout/header";
 @import "./layout/navigation";
 
 // last because of hierarchy of selection
 @import "./base/utilities";
+
+* {
+  outline: 1px solid hotpink;
+}

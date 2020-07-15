@@ -1,0 +1,28 @@
+.header {
+  &__section {
+    background-color: $aws-blue;
+    background-image: url("../../assets/images/bg-top-main.svg");
+    background-size: cover;
+    color: #fff;
+    padding-top: 8.2rem;
+  }
+  &__logo {
+    width: 22rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 7.6rem;
+  }
+  &__title {
+    font-family: AmazonEmberDisplay;
+    font-size: 5.75rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: 0.46px;
+    text-align: left;
+    color: var(--white);
+
+    margin-bottom: 10.8rem;
+  }
+}

@@ -1,0 +1,13 @@
+.intro {
+  &__section {
+    padding: 5rem 0;
+    background-color: var(--ice);
+  }
+
+  &__text {
+    font-family: AmazonEmberDisplay;
+    font-size: 1.315rem;
+    line-height: 1.52;
+    color: var(--dark);
+  }
+}

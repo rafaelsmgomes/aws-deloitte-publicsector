@@ -1,15 +1,37 @@
 @font-face {
-  font-family: "EmberReg";
+  font-family: AmazonEmberDisplay;
   src: url("../../fonts/AmazonEmberDisplay_Rg.ttf");
   font-weight: normal;
 }
 @font-face {
-  font-family: "EmberLt";
+  font-family: AmazonEmberDisplay;
   src: url("../../fonts/AmazonEmberDisplay_Lt.ttf");
-  font-weight: normal;
+  font-weight: lighter;
 }
 @font-face {
-  font-family: "EmberBd";
+  font-family: AmazonEmberDisplay;
   src: url("../../fonts/AmazonEmberDisplay_Bd.ttf");
-  font-weight: normal;
+  font-weight: bold;
+}
+
+.header {
+  &__secondary {
+    font-family: $font-bd;
+    color: $aws-green;
+    font-size: 6.4rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.pg {
+  font-family: $font-reg;
+  color: $black;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+}
+
+.txt {
+  &-purple {
+    color: var(--blue-purple);
+  }
 }

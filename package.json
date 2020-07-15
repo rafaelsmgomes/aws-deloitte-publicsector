@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development --watch-poll"
   },
   "author": "Rafael Gomes",
   "license": "ISC",

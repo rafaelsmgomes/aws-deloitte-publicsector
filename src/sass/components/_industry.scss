@@ -1,0 +1,45 @@
+.industry {
+  &__section {
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__img {
+    width: 100rem;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(35%);
+  }
+
+  // List
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    font-size: 2.2rem;
+    color: $aws-green;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  // green section
+  &__green {
+    background-color: $aws-green;
+    color: white;
+
+    blockquote {
+      border-left: 0.2rem solid white;
+      font-size: 3.8rem;
+      font-family: $font-lt;
+      line-height: 1.33;
+      width: 66rem;
+      margin: 5rem auto;
+      padding-left: 3.1rem;
+    }
+  }
+}
