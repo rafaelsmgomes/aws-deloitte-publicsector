@@ -5,3 +5,23 @@
     clear: both;
   }
 }
+
+@mixin SectionHeadline {
+  font-family: AmazonEmberDisplay;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--light-purple);
+  margin-bottom: 2rem;
+}
+
+@mixin CopyText {
+  font-family: AmazonEmberDisplay;
+  font-size: 1.315rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.52;
+  letter-spacing: normal;
+  color: var(--dark);
+}

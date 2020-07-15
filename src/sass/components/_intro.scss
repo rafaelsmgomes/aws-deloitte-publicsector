@@ -5,9 +5,6 @@
   }
 
   &__text {
-    font-family: AmazonEmberDisplay;
-    font-size: 1.315rem;
-    line-height: 1.52;
-    color: var(--dark);
+    @include CopyText;
   }
 }

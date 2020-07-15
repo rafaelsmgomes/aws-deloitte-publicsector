@@ -6,7 +6,7 @@
 @font-face {
   font-family: AmazonEmberDisplay;
   src: url("../../fonts/AmazonEmberDisplay_Lt.ttf");
-  font-weight: lighter;
+  font-weight: 100;
 }
 @font-face {
   font-family: AmazonEmberDisplay;
@@ -16,18 +16,12 @@
 
 .header {
   &__secondary {
-    font-family: $font-bd;
-    color: $aws-green;
-    font-size: 6.4rem;
-    margin-bottom: 2.5rem;
+    @include SectionHeadline;
   }
 }
 
 .pg {
-  font-family: $font-reg;
-  color: $black;
-  font-size: 2.1rem;
-  margin-bottom: 2rem;
+  @include CopyText;
 }
 
 .txt {

@@ -1,15 +1,14 @@
 .industry {
   &__section {
-    min-height: 100vh;
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
 
   &__img {
-    width: 100rem;
+    width: 49.875rem;
+    height: 31.539rem;
+    object-fit: contain;
     margin: 0 auto;
-    opacity: 0;
-    transform: translateX(35%);
   }
 
   // List
@@ -17,13 +16,19 @@
     list-style: none;
   }
   &__item {
-    font-size: 2.2rem;
-    color: $aws-green;
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 2rem;
-      height: 2rem;
+    font-family: AmazonEmberDisplay;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.14;
+    color: var(--light-purple);
+    vertical-align: center;
+    img {
+      width: 1.8rem;
+      height: 1.8rem;
+      padding: 0.3rem;
+      margin-right: 1rem;
+      border: 1px solid var(--blue-grey);
+      border-radius: 50%;
     }
   }
 
