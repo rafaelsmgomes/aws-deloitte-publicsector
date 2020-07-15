@@ -45,13 +45,9 @@ module.exports = {
       }
     },
     {
-      test: /\.png$/,
-      exclude: /\node_modules/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]',
-        outputPath: 'assets/'
-      }
+      test: /\.html$/,
+      loader: 'html-loader',
+
     },
     {
       test: /\.s[ac]ss$/i,
