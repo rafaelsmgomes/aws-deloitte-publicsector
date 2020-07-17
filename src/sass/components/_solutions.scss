@@ -1,0 +1,19 @@
+.solutions {
+  &__section {
+    padding: 3rem 0;
+    background-color: var(--dark);
+  }
+  &__num {
+    width: 4.998rem;
+    height: 10.625rem;
+    position: absolute;
+    top: 0;
+    &-1 {
+      transform: translateX(-100%);
+      left: -3.25rem;
+    }
+  }
+  &__sub {
+    @include SolutionsSub;
+  }
+}

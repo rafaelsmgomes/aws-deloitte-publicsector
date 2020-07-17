@@ -3,22 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --dark: #232f3e;
-  --pastel-purple: #c5a1ff;
-  --black: #000000;
-  --dark-grey-blue: #2c3a4b;
-  --ice: #eaeded;
-  --blue-purple: #4d27aa;
-  --brownish-grey: #707070;
-  --light-purple: #a166ff;
-  --white: #ffffff;
-  --red: #ea0909;
-  --yellowish-orange: #f7981d;
-  --light-grey-blue: #aab7b8;
-  --duck-egg-blue: #d5dbdb;
-  --blue-grey: #879196;
-}
 
 html {
   // FIXME - turn back the font size to 62.5%
@@ -39,7 +23,7 @@ html {
 }
 
 body {
-  border-left: 0.8rem solid $aws-green; // Same border as the HTML element --> in _base.scss
+  border-left: 0.5rem solid var(--light-purple); // Same border as the HTML element --> in _base.scss
   height: 100%;
   min-height: 100vh;
   overflow-x: hidden;

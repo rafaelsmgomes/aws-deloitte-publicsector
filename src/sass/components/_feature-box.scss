@@ -1,0 +1,44 @@
+.feature-box {
+  &__container {
+    background-color: var(--ice);
+    border-top: 0.642rem solid var(--pastel-purple);
+    padding: 2.3rem;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // This is left side configuration of the box
+  &__left {
+    width: 48%;
+  }
+  &__title {
+    @include FeaturesTitle;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    @include CopyText;
+    font-size: 1.313rem;
+    line-height: 1.33;
+    letter-spacing: 0.21px;
+    margin-bottom: 2rem;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  // This is right side of the box CSS
+  &__right {
+    width: 48%;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    @include CopyText;
+    font-size: 1.313rem;
+    line-height: 1.33;
+    letter-spacing: 0.21px;
+    margin-bottom: 2rem;
+  }
+}

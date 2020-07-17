@@ -22,10 +22,14 @@
 
 .pg {
   @include CopyText;
+  margin-bottom: 2rem;
 }
 
 .txt {
   &-purple {
     color: var(--blue-purple);
+  }
+  &-white {
+    color: white;
   }
 }

@@ -1,0 +1,43 @@
+.quote {
+  &__section {
+    background-color: var(--blue-purple);
+    background-image: url("../../assets/images/artwork-1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    padding: 5rem 0;
+
+    &-light {
+      background-image: url("../../assets/images/bg-purple-2.svg");
+      background-color: var(--pastel-purple);
+    }
+  }
+  &__text {
+    position: relative;
+    margin: 0 auto;
+
+    width: 41.194rem;
+
+    font-family: AmazonEmberDisplay;
+    font-size: 2.25rem;
+    font-weight: normal;
+    line-height: 1.33;
+    color: var(--white);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -3.75rem;
+      height: 105%;
+      width: 0.2rem;
+      background-color: var(--pastel-purple);
+      top: -2.5%;
+    }
+
+    &-light::before {
+      background-color: white;
+    }
+    // padding-left: 3.75rem;
+    // border-left: 0.25rem solid white;
+  }
+}

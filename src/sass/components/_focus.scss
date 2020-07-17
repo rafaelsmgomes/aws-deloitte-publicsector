@@ -1,0 +1,63 @@
+.focus {
+  &__section {
+    padding: 3rem 0;
+  }
+  &__img {
+    height: 30rem;
+    width: 35rem;
+
+    .prefix__cls-10,
+    .prefix__cls-11,
+    .prefix__cls-12,
+    .prefix__cls-13,
+    .prefix__cls-2,
+    .prefix__cls-3,
+    .prefix__cls-4,
+    .prefix__cls-7,
+    .prefix__cls-8 {
+      fill: none;
+      stroke-width: 2px;
+      stroke: red;
+    }
+    .prefix__cls-2,
+    .prefix__cls-3 {
+      stroke: #879196;
+    }
+    .prefix__cls-2,
+    .prefix__cls-7,
+    .prefix__cls-8 {
+      stroke-miterlimit: 10;
+    }
+    .prefix__cls-10,
+    .prefix__cls-11,
+    .prefix__cls-12,
+    .prefix__cls-13,
+    .prefix__cls-3,
+    .prefix__cls-4 {
+      stroke-linejoin: round;
+    }
+    .prefix__cls-11,
+    .prefix__cls-4,
+    .prefix__cls-8 {
+      stroke: #a166ff;
+    }
+    .prefix__cls-4 {
+      stroke-linecap: square;
+    }
+    .prefix__cls-12 {
+      stroke: #869095;
+    }
+    .prefix__cls-6 {
+      fill: #879195;
+    }
+    .prefix__cls-7 {
+      stroke: #879195;
+    }
+    .prefix__cls-10 {
+      stroke: #869196;
+    }
+    .prefix__cls-13 {
+      stroke: #859095;
+    }
+  }
+}

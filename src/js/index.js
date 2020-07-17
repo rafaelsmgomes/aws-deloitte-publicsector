@@ -9,13 +9,12 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, DrawSVGPlugin);
 
 
 
-
 gsap.to('.industry__img', {
   scrollTrigger: {
     trigger: '.industry__img',
     start: "top center",
     toggleActions: 'restart pause none none',
-    markers: true
+    // markers: true
   },
   opacity: 1,
   x: '0%',
@@ -23,6 +22,30 @@ gsap.to('.industry__img', {
   ease: 'Power1.easeIn'
 })
 
+gsap.from('.focus__img *', {
+  duration: 2,
+  drawSVG: '0%',
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.focus__img',
+    markers: true,
+    start: 'top center',
+    toggleActions: 'restart pause none none'
+  }
+})
+
+gsap.from('#prefix__Path_1253', {
+  duration: 2,
+  ease: 'none',
+  rotation: 360,
+  transformOrigin: '50% 50%',
+  scrollTrigger: {
+    trigger: '.focus__img',
+    markers: true,
+    start: 'top center',
+    toggleActions: 'restart pause none none'
+  }
+})
 // scrollTrigger.create()
 
 window.onscroll = () => {
@@ -38,4 +61,3 @@ function addStickyNav() {
     navbar.classList.remove('sticky')
   }
 }
-

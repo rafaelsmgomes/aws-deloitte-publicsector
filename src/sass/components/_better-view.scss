@@ -1,0 +1,8 @@
+.better-view {
+  &__section {
+    padding: 3rem 0;
+  }
+  &__header {
+    @include SectionHeadline;
+  }
+}
