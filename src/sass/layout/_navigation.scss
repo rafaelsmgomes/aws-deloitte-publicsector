@@ -1,11 +1,14 @@
 .navigation {
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
   background-color: $aws-blue;
   color: white;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
   width: 100%;
+  overflow: hidden;
   &__wrapper {
-    height: 15rem;
+    height: 13.4rem;
+    background-color: var(--ice);
   }
 }
 
@@ -44,6 +47,8 @@
   }
   &__sub {
     list-style: none;
+    max-height: 20rem;
+    transition: all 750ms;
   }
   &__item {
     font-family: AmazonEmberDisplay;
@@ -63,4 +68,14 @@
   border-left: 0.5rem solid var(--light-purple);
   z-index: 1000;
   // width: 100%;
+}
+
+.sticky .nav {
+  &__title {
+  }
+  &__sub {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
 }

@@ -3,6 +3,7 @@
     background-color: var(--ice);
     border-top: 0.642rem solid var(--pastel-purple);
     padding: 2.3rem;
+    margin-bottom: 3.75rem;
 
     display: flex;
     justify-content: space-between;
@@ -29,16 +30,35 @@
 
   // This is right side of the box CSS
   &__right {
-    width: 48%;
+    width: 43%;
   }
   &__list {
     list-style: none;
   }
   &__item {
+    position: relative;
     @include CopyText;
     font-size: 1.313rem;
     line-height: 1.33;
     letter-spacing: 0.21px;
     margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    img {
+      position: absolute;
+      transform: translateX(-100%);
+      left: -1rem;
+      top: 0;
+      width: 1.8rem;
+      height: 1.8rem;
+      padding: 0.3rem;
+      margin-right: 1rem;
+      border: 1px solid var(--blue-grey);
+      border-radius: 50%;
+      stroke: var(--blue-grey);
+      stroke-width: 2;
+    }
   }
 }

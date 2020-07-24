@@ -12,8 +12,13 @@
       transform: translateX(-100%);
       left: -3.25rem;
     }
+    &-2 {
+      transform: translateX(100%);
+      right: -3.25rem;
+    }
   }
   &__sub {
     @include SolutionsSub;
+    margin-bottom: 1rem;
   }
 }
