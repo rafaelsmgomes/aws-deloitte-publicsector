@@ -8,6 +8,21 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, DrawSVGPlugin);
 
 
+function gsapScroll(id) {
+  console.log("clicked")
+  gsap.to(window, {
+    duration: 1.5,
+    scrollTo: {
+      y: id,
+      offsetY: 50
+    }
+  })
+}
+
+const indicator1 = document.querySelector('#indicator-1');
+indicator1.addEventListener('click', () => gsapScroll('#industry'))
+
+
 
 gsap.to('.industry__img', {
   scrollTrigger: {
