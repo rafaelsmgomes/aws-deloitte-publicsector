@@ -20,7 +20,81 @@ function gsapScroll(id) {
 }
 
 const indicator1 = document.querySelector('#indicator-1');
-indicator1.addEventListener('click', () => gsapScroll('#industry'))
+const indicator2 = document.querySelector('#indicator-2');
+const indicator3 = document.querySelector('#indicator-3');
+const indicator4 = document.querySelector('#indicator-4');
+const indicator5 = document.querySelector('#indicator-5');
+indicator1.addEventListener('click', () => gsapScroll('#header'))
+indicator2.addEventListener('click', () => gsapScroll('#industry'))
+indicator3.addEventListener('click', () => gsapScroll('#quote-1'))
+indicator4.addEventListener('click', () => gsapScroll('#better-view'))
+indicator5.addEventListener('click', () => gsapScroll('#solutions'));
+
+gsap.to(
+  indicator1, {
+  scrollTrigger: {
+    trigger: '#header',
+    start: "top center",
+    end: "bottom top",
+    toggleActions: 'restart reverse restart reverse',
+    markers: true
+  },
+  backgroundColor: '#c5a1ff',
+  ease: 'none',
+  duration: .25
+})
+gsap.to(
+  indicator2, {
+  scrollTrigger: {
+    trigger: '#industry',
+    start: "top center",
+    end: "bottom center",
+    toggleActions: 'restart reverse restart reverse',
+    markers: true
+  },
+  backgroundColor: '#c5a1ff',
+  ease: 'none',
+  duration: .25
+})
+gsap.to(
+  indicator3, {
+  scrollTrigger: {
+    trigger: '#quote-1',
+    start: "top center",
+    end: "bottom center",
+    toggleActions: 'restart reverse restart reverse',
+    markers: true
+  },
+  backgroundColor: '#c5a1ff',
+  ease: 'none',
+  duration: .25
+})
+gsap.to(
+  indicator4, {
+  scrollTrigger: {
+    trigger: '#better-view',
+    start: "top center",
+    end: "bottom center",
+    toggleActions: 'restart reverse restart reverse',
+    markers: true
+  },
+  backgroundColor: '#c5a1ff',
+  ease: 'none',
+  duration: .25
+})
+gsap.to(
+  indicator5, {
+  scrollTrigger: {
+    trigger: '#solutions',
+    start: "top center",
+    end: "bottom center",
+    toggleActions: 'restart reverse restart reverse',
+    markers: true
+  },
+  backgroundColor: '#c5a1ff',
+  ease: 'none',
+  duration: .25
+})
 
 
 
@@ -43,7 +117,7 @@ gsap.from('.focus__img *', {
   ease: 'none',
   scrollTrigger: {
     trigger: '.focus__img',
-    markers: true,
+    // markers: true,
     start: 'top center',
     toggleActions: 'restart pause none none'
   }
@@ -56,7 +130,7 @@ gsap.from('#prefix__Path_1253', {
   transformOrigin: '50% 50%',
   scrollTrigger: {
     trigger: '.focus__img',
-    markers: true,
+    // markers: true,
     start: 'top center',
     toggleActions: 'restart pause none none'
   }

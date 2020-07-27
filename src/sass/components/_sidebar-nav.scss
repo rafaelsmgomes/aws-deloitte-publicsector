@@ -25,5 +25,8 @@
     border: 1px solid var(--light-purple);
     margin-bottom: 0.2rem;
     border-radius: 15%;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
