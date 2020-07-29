@@ -50,6 +50,10 @@ module.exports = {
 
     },
     {
+      test: /\.(mp4|mov)$/,
+      use: 'file-loader?name=videos/[name].[ext]',
+    },
+    {
       test: /\.s[ac]ss$/i,
       use: [
         'style-loader',
