@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "gsap": "file:gsap-bonus.tgz",
+    "jquery": "^3.5.1",
     "regenerator-runtime": "^0.13.5"
   }
 }
