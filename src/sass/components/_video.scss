@@ -1,7 +1,32 @@
-.video__section {
-  height: 75vh;
-  position: relative;
-  overflow: hidden;
+.video {
+  &__section {
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__headline {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 72.625rem;
+    height: 11.125rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba($color: #2c3a4b, $alpha: 0.75);
+    border-left: 0.5rem solid rgba($color: white, $alpha: 1);
+  }
+  &__text {
+    font-family: AmazonEmber;
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.28;
+    letter-spacing: 0.72px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+  }
 }
 .bg-video {
   position: absolute;
@@ -16,5 +41,6 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    z-index: -1;
   }
 }

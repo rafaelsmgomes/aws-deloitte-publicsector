@@ -8,7 +8,7 @@
   &__arrow {
     width: 0.625rem;
     height: 0.625rem;
-    background-color: var(--light-purple);
+    background-color: var(--soft-blue);
     border-radius: 50%;
     margin-bottom: 0.3rem;
 
@@ -22,9 +22,8 @@
     width: 0.625rem;
     height: 3.125rem;
     background-color: transparent;
-    border: 1px solid var(--light-purple);
+    border: 1px solid var(--blue-grey);
     margin-bottom: 0.2rem;
-    border-radius: 15%;
     &:hover {
       cursor: pointer;
     }

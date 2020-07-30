@@ -14,20 +14,16 @@
 }
 
 .nav {
+  /*
   &__desc {
     font-family: AmazonEmber;
     font-size: 2.25rem;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.2;
-    letter-spacing: normal;
     text-align: left;
-    color: var(--white);
-    margin-right: 3rem;
+    color: #f2f4f4;
     width: 22rem;
   }
-
   &__arrow {
     display: inline-block;
     width: 1.875rem;
@@ -35,6 +31,7 @@
     margin-left: 0.5rem;
     transform: translateY(10%);
   }
+  */
 
   &__wrapper {
     display: flex;
@@ -48,14 +45,21 @@
   &__title {
     font-family: AmazonEmber;
     font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 2;
+    font-weight: 100;
+    line-height: 1.5;
     text-align: left;
-    letter-spacing: normal;
-    color: var(--light-grey-blue);
+    color: var(--light-white);
+    margin-bottom: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      color: orange;
+    }
   }
   &__menu {
     list-style: none;
+    &--2 {
+      display: flex;
+    }
   }
   &__item {
     font-family: AmazonEmber;
@@ -64,7 +68,15 @@
     line-height: 2;
     letter-spacing: -0.02px;
     text-align: left;
-    color: var(--duck-egg-blue);
+    color: var(--light-grey);
+    margin-bottom: 0.3rem;
+
+    p {
+      margin-bottom: 0.3rem;
+    }
+    &--partner {
+      margin-right: 2rem;
+    }
     &:hover {
       cursor: pointer;
       color: orange;
@@ -76,14 +88,23 @@
       list-style: none;
       overflow: hidden;
       color: white;
-      height: 0;
+      // height: 0;
       visibility: 0;
 
       &-1 {
       }
     }
     &-item {
-      margin-left: 1rem;
+      margin-left: 1.3rem;
+      line-height: 1.5;
+      font-family: AmazonEmber;
+      font-size: 1.125rem;
+      font-weight: 100;
+      line-height: 2;
+      letter-spacing: -0.02px;
+      text-align: left;
+      color: var(--light-grey);
+
       &:hover {
         cursor: pointer;
         color: orange;
@@ -96,24 +117,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  border-left: 0.5rem solid var(--light-purple);
+  border-left: 0.5rem solid var(--soft-blue);
   z-index: 100;
   height: fit-content;
   animation: showNav 0.25s ease-in;
 
-  &:hover .nav__menu {
-    //   max-height: auto;
-    //   visibility: visible;
-    //   height: auto;
-    //   opacity: 1;
+  .nav__menu {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
   }
-  // width: 100%;
-}
 
-.sticky .nav__menu {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
+  // width: 100%;
 }
 
 // .nav__open-1.active > .nav__sub-list-1 {

@@ -1,36 +1,39 @@
 .quote {
   &__section {
-    background-color: var(--blue-purple);
-    background-image: url("../../assets/images/artwork-1.svg");
-    background-size: contain;
+    background-color: var(--sapphire);
+    background-image: url("../../assets/images/bg-abstract-blue.svg");
+    background-size: cover;
     background-repeat: no-repeat;
 
     padding: 5rem 0;
 
     &-light {
-      background-image: url("../../assets/images/bg-purple-2.svg");
-      background-color: var(--pastel-purple);
+      background-color: var(--dark);
     }
   }
   &__text {
     position: relative;
     margin: 0 auto;
 
-    width: 41.194rem;
+    width: 69rem;
 
     font-family: AmazonEmber;
     font-size: 2.25rem;
-    font-weight: normal;
     line-height: 1.33;
-    color: var(--white);
+    text-align: left;
+    color: #ffffff;
+
+    p:not(:last-child) {
+      margin-bottom: 2.25rem;
+    }
 
     &::before {
       content: "";
       position: absolute;
       left: -3.75rem;
       height: 105%;
-      width: 0.2rem;
-      background-color: var(--pastel-purple);
+      width: 0.25rem;
+      background-color: white;
       top: -2.5%;
     }
 
