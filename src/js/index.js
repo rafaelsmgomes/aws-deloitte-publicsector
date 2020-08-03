@@ -228,6 +228,8 @@ $('.nav__open-2').hover(function () {
 const navMenu = $('.nav__menu')
 $('.navigation').hover(() => {
   if ($('.navigation').hasClass('sticky')) {
+    // This solution did not work
+    // gsap.to('.nav__menu', { clearProps: true });
     gsap.to('.nav__menu', {
       height: 'auto',
       maxHeight: 'auto',
@@ -240,6 +242,9 @@ $('.navigation').hover(() => {
     closeNav()
   }
 )
+
+// FIXME - if click but stay in hover, does not clear props
+// - I think the hoverOff effect is beinc activated again and it did not clear
 function closeNav() {
   if ($('.navigation').hasClass('sticky')) {
     gsap.to(navMenu, {

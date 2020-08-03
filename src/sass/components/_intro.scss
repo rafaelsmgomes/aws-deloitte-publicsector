@@ -6,6 +6,7 @@
 
   &__title {
     @include SectionHeadline;
+    font-size: 4rem;
     margin-bottom: 1.25rem;
   }
   &__text {
