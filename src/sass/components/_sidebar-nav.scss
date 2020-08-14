@@ -1,29 +1,41 @@
 .sidebar-nav {
   &__container {
     position: fixed;
-    top: 8.125rem;
-    right: 1.75rem;
+    top: 10rem;
+    right: 3rem;
     z-index: 105;
   }
   &__arrow {
-    width: 0.625rem;
-    height: 0.625rem;
-    background-color: var(--soft-blue);
-    border-radius: 50%;
-    margin-bottom: 0.3rem;
-
-    &-Up {
+    width: 1rem;
+    height: 1rem;
+    // display: none;
+    background-image: url("../../assets/images/arrow-side-nav.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 0.5rem;
+    // clip-path: polygon(0 0, 0 100%, 100% 50%);
+    // background-color: var(--blue-grey);
+    // border: 1px solid var(--blue-grey);
+    // transform: translateX(-0.5rem);
+    &:hover {
+      cursor: pointer;
     }
-    &-Down {
-      margin-top: 0.3rem;
+    &Up {
+    }
+    &Down {
+      margin-top: 0.75rem;
+      transform: rotate(180deg);
+      margin-bottom: 0;
+      background-position: top;
     }
   }
   &__indicator {
-    width: 0.625rem;
-    height: 3.125rem;
+    width: 1rem;
+    height: 5rem;
     background-color: transparent;
     border: 1px solid var(--blue-grey);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     &:hover {
       cursor: pointer;
     }

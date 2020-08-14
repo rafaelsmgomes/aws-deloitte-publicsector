@@ -8,7 +8,7 @@
 
 @mixin SectionHeadline {
   font-family: AmazonEmber;
-  font-size: 3rem;
+  font-size: 4.8rem;
   font-weight: bold;
   line-height: 1.2;
   color: var(--soft-blue);
@@ -17,7 +17,7 @@
 
 @mixin CopyText {
   font-family: AmazonEmber;
-  font-size: 1.315rem;
+  font-size: 2.1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -27,7 +27,7 @@
 }
 @mixin SolutionsSub {
   font-family: AmazonEmber;
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   font-weight: bold;
   line-height: 0.89;
   color: var(--soft-blue);
@@ -35,7 +35,7 @@
 
 @mixin FeaturesTitle {
   font-family: AmazonEmber;
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   font-weight: 300;
   line-height: 0.78;
   letter-spacing: 0.36px;

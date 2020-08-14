@@ -1,15 +1,15 @@
 .icon-box {
   &__container {
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   // left side
   &__img {
-    width: 6.875rem;
-    height: 4.438rem;
+    width: 11rem;
+    height: 7.1rem;
     object-fit: contain;
-    margin-right: 3rem;
+    margin-right: 5.5rem;
   }
 
   // right side
@@ -17,35 +17,42 @@
   }
   &__title {
     font-family: AmazonEmber;
-    font-size: 2.25rem;
+    font-size: 3.6rem;
     font-weight: 100;
     line-height: 1.2;
     letter-spacing: 0.36px;
     color: #ffffff;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   &__list {
     list-style: none;
   }
   &__item {
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   &__arrow {
-    width: 1.875rem;
-    height: 1.875rem;
-    margin-right: 1.5rem;
-    margin-top: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
   }
   &__text {
     font-family: AmazonEmber;
-    font-size: 1.313rem;
+    font-size: 2.1rem;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.52;
     letter-spacing: 0.21px;
     text-align: left;
-    color: var(--soft-blue);
+    color: #fff;
+    a {
+      color: var(--carolina-blue);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

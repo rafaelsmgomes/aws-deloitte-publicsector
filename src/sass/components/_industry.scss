@@ -1,7 +1,7 @@
 .industry {
   &__section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 3.2rem;
+    padding-bottom: 4rem;
   }
 
   &__img {
@@ -9,7 +9,7 @@
     justify-content: space-between;
 
     .industry__list {
-      width: 25%;
+      width: 30%;
       align-self: center;
     }
   }
@@ -20,38 +20,17 @@
   }
   &__item {
     font-family: AmazonEmber;
-    font-size: 1.75rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
+    font-size: 2.8rem;
     line-height: 1.14;
-    letter-spacing: normal;
-    text-align: left;
     color: var(--soft-blue);
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     img {
-      width: 1.875rem;
-      height: 1.875rem;
-      margin-right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1.8rem;
       align-self: auto;
       display: block;
-    }
-  }
-
-  // green section
-  &__green {
-    background-color: $aws-green;
-    color: white;
-
-    blockquote {
-      border-left: 0.2rem solid white;
-      font-size: 3.8rem;
-      font-family: $font-lt;
-      line-height: 1.33;
-      width: 66rem;
-      margin: 5rem auto;
-      padding-left: 3.1rem;
     }
   }
 }

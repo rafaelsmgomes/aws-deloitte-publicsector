@@ -4,22 +4,23 @@ $font-lt: "EmberLt", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 $font-bd: "EmberBd", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 
 :root {
-  --dark: #232f3e;
+  --dark: rgb(35, 47, 62); //
   --carolina-blue: #95b0ff;
   --sapphire: #2e27ad;
-  --yellowish-orange: #f7981d;
+  --yellowish-orange: #ff9900;
   --soft-blue: #527fff;
   --ice: #eaeded;
   --red: #db0808;
   --light-grey: #d5dbdb;
   --light-white: #f2f4f4;
   --blue-grey: #879196;
+  --slate-grey: #545b64;
 }
 
 // GRID
-$grid-width: 75rem;
-$gutter-vertical: 3rem;
-$gutter-horizontal: 3rem;
+$grid-width: 120rem;
+$gutter-vertical: 4.8rem;
+$gutter-horizontal: 4.8rem;
 
 // COLORS
 $aws-blue: #212e3f;

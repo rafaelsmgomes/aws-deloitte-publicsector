@@ -10,41 +10,22 @@
   bottom: 0;
   height: auto;
   z-index: 100;
+  display: table;
   // transition: all 500ms;
 }
 
 .nav {
-  /*
-  &__desc {
-    font-family: AmazonEmber;
-    font-size: 2.25rem;
-    font-weight: 300;
-    line-height: 1.2;
-    text-align: left;
-    color: #f2f4f4;
-    width: 22rem;
-  }
-  &__arrow {
-    display: inline-block;
-    width: 1.875rem;
-    height: 1.875rem;
-    margin-left: 0.5rem;
-    transform: translateY(10%);
-  }
-  */
-
   &__wrapper {
     display: flex;
-    justify-content: center;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
   }
 
   &__container {
-    margin-right: 2.5rem;
+    margin-right: 6.5rem;
   }
   &__title {
     font-family: AmazonEmber;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     font-weight: 100;
     line-height: 1.5;
     text-align: left;
@@ -52,7 +33,24 @@
     margin-bottom: 0.5rem;
     &:hover {
       cursor: pointer;
-      color: orange;
+      color: var(--yellowish-orange);
+    }
+
+    &.active {
+      position: relative;
+      &:before {
+        position: absolute;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--yellowish-orange);
+        content: "";
+        display: block;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        left: -0.5rem;
+        // border-radius: 50%;
+        clip-path: polygon(0 0, 0 100%, 100% 50%);
+      }
     }
   }
   &__menu {
@@ -63,7 +61,7 @@
   }
   &__item {
     font-family: AmazonEmber;
-    font-size: 1.125rem;
+    font-size: 1.8rem;
     font-weight: bold;
     line-height: 2;
     letter-spacing: -0.02px;
@@ -75,11 +73,28 @@
       margin-bottom: 0.3rem;
     }
     &--partner {
-      margin-right: 2rem;
+      margin-right: 4rem;
     }
-    &:hover {
+    p:hover {
       cursor: pointer;
-      color: orange;
+      color: var(--yellowish-orange);
+    }
+    &.active {
+      position: relative;
+      // color: var(--yellowish-orange);
+      &:before {
+        position: absolute;
+        top: 1.8rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--yellowish-orange);
+        // border-radius: 50%;
+        clip-path: polygon(0 0, 0 100%, 100% 50%);
+        content: "";
+        display: block;
+        transform: translate(-100%, -50%);
+        left: -0.5rem;
+      }
     }
   }
 
@@ -87,7 +102,7 @@
     &-list {
       list-style: none;
       overflow: hidden;
-      color: white;
+      color: var(--light-grey);
       // height: 0;
       visibility: 0;
 
@@ -95,10 +110,10 @@
       }
     }
     &-item {
-      margin-left: 1.3rem;
+      margin-left: 2.2rem;
       line-height: 1.5;
       font-family: AmazonEmber;
-      font-size: 1.125rem;
+      font-size: 1.8rem;
       font-weight: 100;
       line-height: 2;
       letter-spacing: -0.02px;
@@ -107,7 +122,24 @@
 
       &:hover {
         cursor: pointer;
-        color: orange;
+        color: var(--yellowish-orange);
+      }
+      &.active {
+        position: relative;
+        // color: var(--yellowish-orange);
+        &:before {
+          position: absolute;
+          width: 0.75rem;
+          height: 0.75rem;
+          background-color: var(--yellowish-orange);
+          content: "";
+          display: block;
+          top: 50%;
+          transform: translate(-100%, -50%);
+          left: -0.5rem;
+          // border-radius: 50%;
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+        }
       }
     }
   }
@@ -117,7 +149,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  border-left: 0.5rem solid var(--soft-blue);
+  border-left: 0.8rem solid var(--soft-blue);
   z-index: 100;
   height: fit-content;
   animation: showNav 0.25s ease-in;
@@ -129,6 +161,15 @@
   }
 
   // width: 100%;
+}
+
+.nav__wrapper:hover {
+  .active {
+    // color: red;
+    &:hover {
+      // color: var(--yellowish-orange);
+    }
+  }
 }
 
 // .nav__open-1.active > .nav__sub-list-1 {

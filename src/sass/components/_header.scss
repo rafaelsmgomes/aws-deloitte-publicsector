@@ -1,29 +1,26 @@
 .header {
   &__section {
-    background-color: $aws-blue;
+    background-color: var(--dark);
     background-image: url("../../assets/images/bg-top-main.svg");
     background-size: cover;
     color: #fff;
     padding-top: 8.2rem;
-    height: 60rem;
+    height: 80rem;
     position: relative;
   }
   &__logo {
-    width: 22rem;
-    height: 4rem;
+    width: 33.3rem;
+    height: 6.4rem;
     object-fit: contain;
-    margin-bottom: 7.6rem;
+    margin-bottom: 13.4rem;
   }
   &__title {
     font-family: AmazonEmber;
-    font-size: 5rem;
+    font-size: 8.1rem;
     font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.13;
-    text-align: left;
+    line-height: 1.28;
     color: var(--white);
 
-    margin-bottom: 10.8rem;
+    margin-bottom: 37.5rem;
   }
 }

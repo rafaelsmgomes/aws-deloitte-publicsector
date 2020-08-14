@@ -1,23 +1,26 @@
 .solutions {
   &__section {
-    padding: 3rem 0;
+    padding: 3.5rem 0;
     background-color: var(--dark);
   }
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+  }
   &__num {
-    height: 10.625rem;
-    position: absolute;
-    top: 0;
-    &-1 {
-      transform: translateX(-100%);
-      left: -3.25rem;
-    }
-    &-2 {
-      transform: translateX(100%);
-      right: -3.25rem;
-    }
+    height: 12rem;
+    width: 9rem;
+    object-fit: contain;
+    object-position: left;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-right: 2rem;
   }
   &__sub {
     @include SolutionsSub;
+    // padding-top: 3rem;
     margin-bottom: 1rem;
   }
 }
