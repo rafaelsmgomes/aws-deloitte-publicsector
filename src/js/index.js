@@ -126,7 +126,13 @@ function gsapColorSection(indicator, sectionIdentifier, endSection) {
 // ----------------------------------------------------
 // Sticky Navigation Function
 // ----------------------------------------------------
-if ($(window).width() >= 1024) {
+$(window).resize(checkSize)
+$(document).ready(() => {
+  if ($(window).width() >= 1024) {
+    checkSize()
+  }
+})
+function checkSize() {
   window.onscroll = () => {
     addStickyNav();
   }
@@ -143,6 +149,11 @@ function addStickyNav() {
     $('.nav__menu').removeAttr('style')
   }
 }
+
+$('.hamburger-icon').click(() => {
+  $('.menu-dd').toggleClass('active')
+  $('.hamburger-icon').toggleClass('active')
+})
 
 
 // ----------------------------------------------------------------

@@ -1,7 +1,7 @@
 .navigation {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  background-color: $aws-blue;
+  background-color: var(--dark);
   color: white;
   padding-bottom: 1.5rem;
   width: 100%;
@@ -11,9 +11,60 @@
   height: auto;
   z-index: 100;
   display: table;
-  // transition: all 500ms;
+
+  @media only screen and (max-width: 1024px) {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    overflow: auto;
+    padding-bottom: 0;
+  }
 }
 
+.icon_wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hamburger-icon {
+  fill: #879196;
+  display: none;
+
+  @media only screen and (max-width: 1024px) {
+    float: right;
+    // background-image: url("../../assets/images/icon-nav-mobile.svg");
+    width: 3.4rem;
+    height: 2.4rem;
+    display: block;
+    content: "";
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+    &.active {
+      fill: orange;
+    }
+  }
+}
+
+.menu-dd {
+  @media only screen and (max-width: 1024px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100vw;
+    // height: 100vh;
+    background-color: var(--dark);
+    border-top: 1px solid black;
+    // TODO - activate display none when done styling
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
 .nav {
   &__wrapper {
     display: flex;
@@ -146,33 +197,21 @@
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-left: 0.8rem solid var(--soft-blue);
-  z-index: 100;
-  height: fit-content;
-  animation: showNav 0.25s ease-in;
+  @media only screen and (min-width: 1024px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-left: 0.8rem solid var(--soft-blue);
+    z-index: 100;
+    height: fit-content;
+    animation: showNav 0.25s ease-in;
 
-  .nav__menu {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
+    .nav__menu {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+    }
   }
 
   // width: 100%;
 }
-
-.nav__wrapper:hover {
-  .active {
-    // color: red;
-    &:hover {
-      // color: var(--yellowish-orange);
-    }
-  }
-}
-
-// .nav__open-1.active > .nav__sub-list-1 {
-// height: auto;
-// visibility: visible;
-// }
