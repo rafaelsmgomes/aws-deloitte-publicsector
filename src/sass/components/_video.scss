@@ -3,6 +3,20 @@
     height: 85vh;
     position: relative;
     overflow: hidden;
+    background-image: url("../../assets/images/cognizant-manufacturing-2.jpg");
+    background-position: bottom;
+    background-size: cover;
+    @media only screen and (max-width: 1024px) {
+      // TODO - test different heights on tablet and mobile
+      // height: 60vh;
+      background-position: center;
+    }
+    @media only screen and (max-width: 700px) {
+      height: 60vh;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 40vh;
+    }
   }
 
   &__headline {
@@ -14,6 +28,12 @@
     display: block;
 
     background: linear-gradient(rgba(black, 0.8), rgba(black, 0));
+    @media only screen and (max-width: 1024px) {
+      top: auto;
+      bottom: 0;
+      height: auto;
+      background: rgba(black, 0.5);
+    }
   }
   &__text-box {
     width: 107rem;
@@ -28,17 +48,45 @@
     text-align: center;
     color: #ffffff;
     z-index: 1;
+    height: auto;
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      transform: translate(0%, 0%);
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+    @media only screen and (max-width: 825px) {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__title {
     font-size: 6rem;
     text-align: center;
     color: #ffffff;
     letter-spacing: 0.6px;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 3rem;
+    }
   }
   &__sub {
     font-weight: normal;
     font-size: 3.6rem;
     letter-spacing: 0.36px;
+    @media only screen and (max-width: 800px) {
+      font-size: 2.7rem;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 2rem;
+    }
   }
 }
 .bg-video {

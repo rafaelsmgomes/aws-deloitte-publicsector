@@ -5,6 +5,10 @@
   &__img {
     width: 67rem;
     height: 51rem;
+    @media only screen and (max-width: 915px) {
+      width: 100%;
+      height: auto;
+    }
 
     .prefix__cls-10,
     .prefix__cls-11,

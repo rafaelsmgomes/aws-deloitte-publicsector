@@ -8,6 +8,8 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, DrawSVGPlugin);
 
+// FIXME - should wrap everything inside a document ready function
+// $(document).ready() 
 
 const indicator1 = $('#indicator-1');
 const indicator2 = $('#indicator-2');
@@ -24,23 +26,78 @@ indicator5.click(() => gsapScroll('.focus__section'))
 indicator6.click(() => gsapScroll('#solutions--start'));
 indicator7.click(() => gsapScroll('#solutions--2'));
 
-$('.nav__title--1').click(() => { gsapScroll('.intro__section'); closeNav() })
-$('.nav__title--2').click(() => { gsapScroll('.solutions__section'); closeNav() })
-$('.nav__item--aws--1').click(() => { gsapScroll('.industry__section'); closeNav() })
-$('.nav__item--aws--2').click(() => { gsapScroll('#better-view'); closeNav() })
-$('.nav__item--aws--3').click(() => { gsapScroll('.focus__section'); closeNav() });
 
-$('.nav__focus--1').click(() => { gsapScrollHigher('#solutions--1'); closeNav() });
-$('.nav__focus--2').click(() => { gsapScrollHigher('#solutions--2'); closeNav() });
+$('.nav__title--1').click(() => {
+  gsapScroll('.intro__section');
+  navFunc()
+})
+$('.nav__title--2').click(() => {
+  gsapScroll('.solutions__section');
+  navFunc()
+})
+$('.nav__item--aws--1').click(() => {
+  gsapScroll('.industry__section');
+  navFunc()
+})
+$('.nav__item--aws--2').click(() => {
+  gsapScroll('#better-view');
+  navFunc()
+})
+$('.nav__item--aws--3').click(() => {
+  gsapScroll('.focus__section');
+  navFunc()
+});
 
-$('.nav__sub-item-1').click(() => { gsapScrollHigher('#solutions--1-1'); closeNav() });
-$('.nav__sub-item-2').click(() => { gsapScrollHigher('#solutions--1-2'); closeNav() });
-$('.nav__sub-item-3').click(() => { gsapScrollHigher('#solutions--1-3'); closeNav() });
-$('.nav__sub-item-4').click(() => { gsapScrollHigher('#solutions--1-4'); closeNav() });
-$('.nav__sub-item-5').click(() => { gsapScrollHigher('#solutions--2-1'); closeNav() });
-$('.nav__sub-item-6').click(() => { gsapScrollHigher('#solutions--2-2'); closeNav() });
-$('.nav__sub-item-7').click(() => { gsapScrollHigher('#solutions--2-3'); closeNav() });
-$('.nav__sub-item-8').click(() => { gsapScrollHigher('#solutions--2-4'); closeNav() });
+$('.nav__focus--1').click(() => {
+  gsapScrollHigher('#solutions--1');
+  navFunc()
+});
+$('.nav__focus--2').click(() => {
+  gsapScrollHigher('#solutions--2');
+  navFunc()
+});
+
+$('.nav__sub-item-1').click(() => {
+  gsapScrollHigher('#solutions--1-1');
+  navFunc()
+});
+$('.nav__sub-item-2').click(() => {
+  gsapScrollHigher('#solutions--1-2');
+  navFunc()
+});
+$('.nav__sub-item-3').click(() => {
+  gsapScrollHigher('#solutions--1-3');
+  navFunc()
+});
+$('.nav__sub-item-4').click(() => {
+  gsapScrollHigher('#solutions--1-4');
+  navFunc()
+});
+$('.nav__sub-item-5').click(() => {
+  gsapScrollHigher('#solutions--2-1');
+  navFunc()
+});
+$('.nav__sub-item-6').click(() => {
+  gsapScrollHigher('#solutions--2-2');
+  navFunc()
+});
+$('.nav__sub-item-7').click(() => {
+  gsapScrollHigher('#solutions--2-3');
+  navFunc()
+});
+$('.nav__sub-item-8').click(() => {
+  gsapScrollHigher('#solutions--2-4');
+  navFunc()
+});
+
+function navFunc() {
+  if ($(window).width() >= 1024) {
+    closeNav()
+  } else if ($(window).width() <= 1023) {
+    $('.menu-dd').toggleClass('active')
+    $('.hamburger-icon').toggleClass('active')
+  }
+}
 
 function gsapScroll(id) {
   gsap.to(window, {
@@ -63,16 +120,17 @@ function gsapScrollHigher(id) {
 
 gsapColorSection(indicator1, '#header', '.video__section')
 gsapColorSection(indicator2, '.intro__section')
-gsapColorSection(indicator3, '#industry', '#quote-1')
-gsapColorSection(indicator4, '#better-view', '.quote__section-light')
+gsapColorSection(indicator3, '#industry')
+gsapColorSection(indicator4, '#better-view')
 gsapColorSection(indicator5, '.focus__section')
 gsapColorSection(indicator6, '#solutions--start', '#solutions--1-4')
 gsapColorSection(indicator7, '#solutions--2', '#solutions--2-4')
 
+// ------------- Arrow functions ------------- 
+$('.sidebar-nav__navigation--prev').click(() => gsapScroll('.arrow-prev'))
+$('.sidebar-nav__navigation--next').click(() => gsapScroll('.arrow-next'))
 
 // $('.sidebar-nav__arrowDown').click(() => { gsapScroll('.intro__section') })
-const arrowUp = $('.sidebar-nav__arrowUp')
-const arrowDown = $('.sidebar-nav__arrowDown')
 var position = 1
 function gsapColorSection(indicator, sectionIdentifier, endSection) {
   gsap.to(
@@ -85,33 +143,40 @@ function gsapColorSection(indicator, sectionIdentifier, endSection) {
       toggleActions: 'restart reverse restart reverse',
       onToggle: (self) => {
         if (self.isActive) {
-          console.log(this)
-          console.log(self.vars.trigger)
 
           if (self.vars.trigger === '#header') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('#header'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('.intro__section'))
-            console.log(position)
-            console.log(this)
-
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('#header').addClass('arrow-prev');
+            $('.intro__section').addClass('arrow-next')
           } else if (self.vars.trigger === '.intro__section') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('#header'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('#industry'))
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('#header').addClass('arrow-prev');
+            $('#industry').addClass('arrow-next')
           } else if (self.vars.trigger === '#industry') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('.intro__section'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('#better-view'))
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('.intro__section').addClass('arrow-prev')
+            $('#better-view').addClass('arrow-next')
+
           } else if (self.vars.trigger === '#better-view') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('#industry'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('.focus__section'))
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('#industry').addClass('arrow-prev');
+            $('.focus__section').addClass('arrow-next')
+
           } else if (self.vars.trigger === '.focus__section') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('#better-view'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('#solutions--start'))
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('#better-view').addClass('arrow-prev');
+            $('#solutions--start').addClass('arrow-next')
+
           } else if (self.vars.trigger === '#solutions--start') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('.focus__section'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('#solutions--2'))
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('.focus__section').addClass('arrow-prev');
+            $('#solutions--2').addClass('arrow-next')
+
           } else if (self.vars.trigger === '#solutions--2') {
-            $('.sidebar-nav__arrowUp').click(() => gsapScroll('#solutions--start'))
-            $('.sidebar-nav__arrowDown').click(() => gsapScroll('#solutions--2'))
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('#solutions--start').addClass('arrow-prev');
+            $('#solutions--2').addClass('arrow-next')
+
           }
 
         }
@@ -130,6 +195,8 @@ $(window).resize(checkSize)
 $(document).ready(() => {
   if ($(window).width() >= 1024) {
     checkSize()
+  } else if ($(window).width() <= 1023) {
+    $('video').remove()
   }
 })
 function checkSize() {
@@ -150,10 +217,13 @@ function addStickyNav() {
   }
 }
 
+// Hamburger Icon functionality - below 1024px 
+// TODO - implement touch screen detection for media queries
 $('.hamburger-icon').click(() => {
   $('.menu-dd').toggleClass('active')
   $('.hamburger-icon').toggleClass('active')
 })
+
 
 
 // ----------------------------------------------------------------
@@ -183,7 +253,6 @@ function closeNav() {
       autoAlpha: 0,
     })
   }
-  console.log('close_nav')
 }
 
 
@@ -192,7 +261,7 @@ function closeNav() {
 // ----------------------------------------------------------------
 const headlineTl = gsap.timeline({
   scrollTrigger: {
-    trigger: '.video__headline',
+    trigger: '.video__section',
     start: 'top center',
     toggleActions: 'play none none reverse'
   },
@@ -585,4 +654,51 @@ ScrollTrigger.create({
 })
 
 
+// ----------------------------------------------------------------
+// Responsive outlook
+// ----------------------------------------------------------------
+
+$(document).ready(() => {
+  $('#preloader').delay(4500).fadeOut()
+  $('body').delay(4500).css('opacity', '1')
+
+  if ($('body').width() <= 1024) {
+    var st = $(window).scrollTop();
+    var lastScrollTop = 0;
+    // console.log(st)
+    var delta = 50;
+    var didScroll;
+    // var navbarHeight = $('.footer-phone').outerHeight();
+
+    setInterval(function () {
+      if (didScroll) {
+        didScroll = false;
+      }
+    }, 250);
+
+    $(window).scroll(function () {
+
+      didScroll = true;
+      var st = $(this).scrollTop();
+      // Make sure they scroll more than delta
+      if (Math.abs(lastScrollTop - st) <= delta)
+        return;
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop) {
+        // Scroll Down
+        $(".sidebar-nav__container").addClass('up');
+      } else {
+        // Scroll Up
+        $(".sidebar-nav__container").removeClass('up');
+
+        if (st < 150) {
+          $(".sidebar-nav__container").removeClass('up');
+        }
+      }
+
+      lastScrollTop = st;
+
+    });
+  }
+})
 

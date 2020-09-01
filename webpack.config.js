@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
@@ -10,13 +11,14 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 9000
+    port: 3000
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html'
-    })
+    }),
+    new MiniCssExtractPlugin()
   ],
   module: {
     rules: [{
@@ -54,7 +56,7 @@ module.exports = {
       use: 'file-loader?name=videos/[name].[ext]',
     },
     {
-      test: /\.s[ac]ss$/i,
+      test: /\.(sa|sc|c)ss$/i,
       use: [
         'style-loader',
         {

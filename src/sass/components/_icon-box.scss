@@ -2,6 +2,9 @@
   &__container {
     display: flex;
     margin-bottom: 4rem;
+    @media only screen and (max-width: 425px) {
+      flex-direction: column;
+    }
   }
 
   // left side
@@ -10,6 +13,10 @@
     height: 7.1rem;
     object-fit: contain;
     margin-right: 5.5rem;
+    @media only screen and (max-width: 425px) {
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+    }
   }
 
   // right side

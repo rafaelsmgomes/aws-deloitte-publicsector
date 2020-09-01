@@ -17,6 +17,9 @@
     left: auto;
     right: auto;
     margin-right: 2rem;
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
   }
   &__sub {
     @include SolutionsSub;

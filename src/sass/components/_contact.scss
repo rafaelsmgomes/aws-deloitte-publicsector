@@ -8,12 +8,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+    }
   }
 
   // Left side of flexbox
   &__left {
     font-family: AmazonEmber;
     color: #ffffff;
+    @media only screen and (max-width: 500px) {
+      margin-bottom: 2rem;
+    }
   }
   &__header {
     font-size: 2.4rem;
@@ -27,6 +33,9 @@
   // Right side of flexbox
   &__right {
     margin-left: auto;
+    @media only screen and (max-width: 500px) {
+      margin-left: 0;
+    }
   }
   &__btn {
     background-color: orange;
@@ -62,6 +71,9 @@
     background-color: #ec7211;
     background-image: linear-gradient(180deg, #f67c1b 0, #e15500);
     box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.2);
+    @media only screen and (max-width: 500px) {
+      margin-left: 0;
+    }
 
     &:hover {
       background-color: #eb5f07;

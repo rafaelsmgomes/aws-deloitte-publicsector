@@ -7,12 +7,16 @@
                       width=device-width, initial-scale=1.0, 
                       minimum-scale=1.0, maximum-scale=1.0, 
                       user-scalable=no, target-densitydpi=device-dpi">
-  <title>Document</title>
+  <title>Cognizant Manufacturing on AWS</title>
 </head>
 
-<body>
-  <div class="sidebar-nav__container">
-    <div class="sidebar-nav__arrow sidebar-nav__arrowUp"></div>
+<body style="opacity: 0;">
+  <div id="preloader"></div>
+  <div class="sidebar-nav__container show">
+    <div class="sidebar-nav__navigation sidebar-nav__navigation--prev">
+      <span class="sidebar-nav__text sidebar-nav__text--prev">Previous</span>
+      <div class="sidebar-nav__arrow sidebar-nav__arrowUp"></div>
+    </div>
     <div class="sidebar-nav__indicator" id="indicator-1"></div>
     <div class="sidebar-nav__indicator" id="indicator-2"></div>
     <div class="sidebar-nav__indicator" id="indicator-3"></div>
@@ -20,12 +24,16 @@
     <div class="sidebar-nav__indicator" id="indicator-5"></div>
     <div class="sidebar-nav__indicator" id="indicator-6"></div>
     <div class="sidebar-nav__indicator" id="indicator-7"></div>
-    <div class="sidebar-nav__arrow sidebar-nav__arrowDown"></div>
+    <div class="sidebar-nav__navigation sidebar-nav__navigation--next">
+      <div class="sidebar-nav__arrow sidebar-nav__arrowDown"></div>
+      <span class="sidebar-nav__text sidebar-nav__text--next">Next</span>
+    </div>
+
   </div>
-  <section class="header__section" id="header">
+  <section class="header__section anchor arrow-prev" id="header">
     <div class="row">
       <img src="./assets/images/logo-cognizant.svg" alt="aws_logo" class="header__logo">
-      <h1 class="header__title">Cognizant Manufacturing <span class="txt-softBlue">on</span> AWS</h1>
+      <h1 class="header__title">Cognizant Manufacturing <span class="txt-softBlue">on</span>&nbsp;AWS</h1>
     </div>
     <div class="navigation">
       <div class="icon__wrap">
@@ -59,7 +67,7 @@
                 </ul>
               </div>
               <div class="nav__container nav__container--2">
-                <h3 class="nav__title nav__title--2">Cognizant Solutions for Manufacturing on AWS</h3>
+                <h3 class="nav__title nav__title--2">Cognizant Solutions for Manufacturing on&nbsp;AWS</h3>
                 <div class="nav__menu nav__menu--2">
                   <div class="nav__item nav__item--4 nav__item--partner nav__open-1">
                     <p class="nav__focus--1">1. Facilities management</p>
@@ -98,40 +106,53 @@
     </div>
     <div class="video__headline">
       <div class="video__text-box">
-        <h2 class="video__title">Cognizant Manufacturing on AWS</h2>
+        <h2 class="video__title">Cognizant Manufacturing on&nbsp;AWS</h2>
         <p class="video__sub">Enhance efficiency, streamline operations, and protect assets.</p>
       </div>
     </div>
   </section>
-  <section class="intro__section">
+  <section class="intro__section anchor arrow-next">
     <div class="row">
       <h2 class="intro__title">Why AWS?</h2>
       <div class="col-1-of-2">
-        <p class="intro__text">For 25 years, Amazon has been designing and manufacturing smart products and distributing
-          them—plus billions of other manufacturers’ products—through Amazon’s globally connected distribution network.
-          Amazon Web Services (AWS) was literally born from our own complex automation and factory operations. We use
-          cutting-edge automation, machine learning (ML), artificial intelligence (AI), and robotics.</p>
+        <p class="intro__text pg">Manufacturers are embracing digital transformation as a way to answer many of today’s
+          challenges and position their companies for long-term success. They are looking for innovative ways to make
+          data-driven decisions, further automate processes, and take advantage of new technologies such as machine
+          learning, computer vision, and robotics. They seek ways to squeeze out additional productivity, maximize asset
+          availability, and improve quality, all while lowering costs.</p>
+        <p class="intro__text pg">In addition to meeting quality and production optimization goals, manufacturers are
+          more aggressively tackling sustainability goals. They strive to reduce consumption of water, compressed air,
+          gas, electricity and steam to lighten their energy footprint.</p>
       </div>
       <div class="col-1-of-2">
-        <p class="intro__text">AWS helps you transform manufacturing operations with the most comprehensive and advanced
-          set of cloud solutions available. Instead of focusing on building and maintaining your infrastructure, you can
-          concentrate your resources on creating new product opportunities, improving operational efficiencies across
-          the value chain, and optimizing production.</p>
+        <p class="intro__text pg">Amazon Web Services (AWS) was born from our industrial operations at Amazon, and we
+          understand the needs of factory operations. For more than 20 years, Amazon has been designing and
+          manufacturing smart products. We also distribute billions of products through our globally connected
+          distribution network using cutting-edge automation, machine learning services, and robotics, with AWS at the
+          core.</p>
+        <p class="intro__text pg">AWS helps you transform manufacturing operations with the most comprehensive and
+          advanced set of cloud solutions available today. Instead of focusing on building and maintaining your data
+          center infrastructure, concentrate your resources on creating innovative new products, improving operational
+          efficiencies across the value chain, and optimizing production.</p>
       </div>
     </div>
   </section>
-  <section class="industry__section" id="industry">
+  <section class="industry__section anchor" id="industry">
     <div class="row">
       <h2 class="header__secondary">Improve product design and production processes</h2>
       <div class="col-1-of-2">
-        <p class="pg">AWS delivers virtually unlimited High Performance Computing (HPC), which lets you innovate quickly
-          without adding infrastructure. When they run HPC in the cloud, your designers, scientists, and engineers can
-          use model-based design and large-scale parallel simulations to solve complex computing challenges. </p>
+        <p class="pg">AWS delivers virtually unlimited compute and storage capacity, along with one of the most
+          comprehensive sets
+          of edge-to-cloud solutions available today. Reduce time
+          to results and time to market by running more parallel
+          tasks than most on-premises environments allow.
+          Innovate faster without the worry about scaling your
+          data center infrastructure.</p>
       </div>
       <div class="col-1-of-2">
-        <p class="pg">You can reduce time to results and time to market for products by running more parallel tasks than
-          an on-premises environment would allow. In addition, having optimized central processing unit (CPU), graphics
-          processing unit (GPU), and field programmable gate array(FPGA) servers available on demand helps reduce costs.
+        <p class="pg">When designers, scientists, and engineers run High Performance Computing (HPC) workloads in the
+          cloud, they can use model-based design and large-scale parallel simulations to quickly solve complex computing
+          challenges and collaborate more effectively with secure file sharing, and access to AWS resources worldwide.
         </p>
       </div>
     </div>
@@ -140,75 +161,70 @@
         <img src="./assets/images/graphic-manufacturing.svg" alt="graphic-manufacturing" id="graphic-manufacturing">
         <ul class="industry__list">
           <li class="industry__item"><img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
+            <p>Unlimited compute and storage capacity</p>
+          </li>
+          <li class="industry__item"><img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
             <p>High Performance Computing (HPC)</p>
           </li>
           <li class="industry__item"><img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
             <p>Reduce time to results and to market</p>
           </li>
-          <li class="industry__item"><img src="./assets/images/icon-arrow.svg" alt="icon-arrow">
-            <p>Reduce costs</p>
-          </li>
         </ul>
       </div>
     </div>
-  </section>
-  <section class="quote__section quote__section--1" id="quote-1">
+
     <div class="row">
-      <blockquote class="quote__text">Using electronic design automation (EDA) to develop and deploy smart products can
-        be complex and costly, but using HPC on AWS with Amazon FreeRTOS (real-time operating system, our open-source
-        operating system for multicontrollers) gives you the flexibility to right-size your compute environment to meet
-        the unique needs of each application. By maintaining a universal connection to the AWS cloud platform throughout
-        the process, you can deploy all or just part of your EDA workflow for faster project completion times, increased
-        EDA performance, and reduced costs.</blockquote>
+      <div class="col-1-of-2">
+        <p class="pg">AWS offers a secure, agile, and scalable platform with a comprehensive set of services and
+          solutions for high performance design, verification, and smart manufacturing, supporting EDA and rapid
+          semiconductor innovation in the cloud. </p>
+      </div>
+      <div class="col-1-of-2">
+        <p class="pg">Semiconductor design simulation, verification, lithography, metrology, yield analysis, and many
+          other workloads benefit from the scalability and performance of the AWS Cloud.</p>
+      </div>
+    </div>
+    <div class="quote__section quote__section--2 quote__section-light">
+      <div class="row">
+        <blockquote class="quote__text quote__text-light">
+          <p>Leading Semiconductor companies today use AWS to take advantage of a more rapid, flexible deployment of
+            computer-aided engineering (CAE) and electronic design automation (EDA) infrastructure, from the complete
+            integrated circuit design workflow, to register-transfer-level (RTL) design, to the delivery of GDSII files
+            to
+            a foundry for chip fabrication. AWS compute, storage, and higher-level services are available on a dynamic,
+            as-needed basis without the significant up-front capital expenditure that is typically required for
+            performance-critical EDA workloads. </p>
+        </blockquote>
+      </div>
     </div>
   </section>
-  <section class="better-view__section" id="better-view">
+
+  <section class="better-view__section anchor" id="better-view">
     <div class="row">
       <h2 class="better-view__header">Get smart with your data</h2>
       <div class="col-1-of-2">
-        <p class="pg">Manufacturing is dependent on data – not just gathering it, but using it effectively. To
-          continually get more out of data at every point, you can leverage the full range of AWS tools, including IoT
-          services, edge computing, data lakes, ML, AI, and advanced analytics tools. </p>
+        <p class="pg">Manufacturing is dependent on data – not just gathering it, but using it effectively. To get more
+          out of valuable data in your factory it needs to be extracted from disparate sources and production systems,
+          structured for context and stored, and then analyzed to optimize production, machine availability, and
+          quality.</p>
       </div>
       <div class="col-1-of-2">
-        <p class="pg">From collection to processing, from storage to analysis, from visualization to execution on the
-          production floor, AWS helps you use data to improve smart product development and manufacturing operations.
+        <p class="pg">AWS Cloud services address these use cases by helping manufacturers extract, structure and store
+          data from a variety of current and legacy equipment into a data lake for a combined, single source of truth.
         </p>
       </div>
     </div>
   </section>
-  <section class="quote__section quote__section--2 quote__section-light">
+
+  <section class="focus__section anchor">
     <div class="row">
-      <blockquote class="quote__text quote__text-light">
-        <p>
-          Advanced analytics can help optimize data gathered from
-          disparate sources and different systems. With Amazon apps such as Kinesis and SageMaker, or services such as
-          AWS
-          Managed Blockchain to digitize data at the source, you can get instantly accessible, end-to-end information.
-        </p>
-        <p>
-          You can use that data to glean valuable insights: track the supply chain more precisely, predict equipment
-          failures ahead of time, use accurate projections to increase production appropriately, produce higher-quality
-          products, and boost profits.
-        </p>
-      </blockquote>
-    </div>
-  </section>
-  <section class="focus__section">
-    <div class="row">
-      <h2 class="header__secondary">Streamline operations and enhance security</h2>
+      <h2 class="header__secondary">Enhance security and streamline operations </h2>
       <div class="col-1-of-2">
-        <p class="pg">As a manufacturer, you want to focus on innovation and improving business operations, not on IT
-          and operational technology (OT) infrastructure. Building and tailoring an AWS-enabled data lake lets you
-          securely store, categorize, and analyze all your data in one centralized cloud repository. That gives you the
-          ability to apply real-time and predictive analytics to improve overall equipment effectiveness (OEE), service
-          levels, product quality, and supply chain efficiency.
-        </p>
-        <p class="pg">With OT infrastructure cyberattacks on the rise, cloud security is our highest priority at AWS.
-          When you work with us, you’ll benefit from a data center and network architecture that’s built to meet the
-          requirements of the most security-sensitive industries and organizations. And you will protect your factory by
-          leveraging S3 and other storage services in the AWS cloud for a viable and realistic disaster recovery plan.
-        </p>
+        <p class="pg">Protecting your intellectual property and the integrity of your production processes is vital in
+          today’s business environment, where operational technology (OT) infrastructure cyberattacks are on the rise.
+          At AWS, cloud security is our highest priority. When you work with us, you’ll benefit from a data center and
+          network architecture that’s built to meet the requirements of the most security-sensitive industries and
+          organizations.</p>
       </div>
       <div class="col-1-of-2">
         <svg class="focus__img" xmlns="http://www.w3.org/2000/svg" id="graphic-cap-manuf-secondary" width="671.9"
@@ -459,7 +475,7 @@
       </div>
     </div>
   </section>
-  <section class="solutions__section" id="solutions--start">
+  <section class="solutions__section anchor" id="solutions--start">
     <div class="row">
       <h2 class="header__primary txt-white">Cognizant Solutions for Manufacturing on AWS</h2>
       <p class="pg txt-white">Cognizant delivers solutions on AWS that modernize manufacturing ecosystems while
@@ -520,7 +536,7 @@
         <div class="feature-box__container">
           <div class="feature-box__left">
             <div class="feature-box__title">Benefits</div>
-            <div class="feature-box__text">Connected places aren’t just more comfortable—they’re also safer, more
+            <div class="feature-box__text">Connected places aren’t just more comfortable –they’re also safer, more
               cost-effective, and more efficient. Plus, digital transformation invites further operational gains by
               enabling quick integration of new innovations.</div>
             <img src="./assets/images/graphic-benefits-1.svg" alt="graphic-features-1" class="feature-box__img">
@@ -547,78 +563,78 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="icon-box__container" id="solutions--1-3">
-          <img src="./assets/images/icon-customer-references.svg" alt="icon-customer-references" class="icon-box__img">
-          <div class="icon-box__content">
-            <p class="icon-box__title">Customer references</p>
-            <ul class="icon-box__list">
-              <li class="icon-box__item">
-                <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
-                <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
-                    target="_blank">A leading department store </a>automates
-                  energy scheduling from a
-                  single point of control for 2,000 stores.</p>
-              </li>
-              <li class="icon-box__item">
-                <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
-                <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
-                    target="_blank">A national insurer</a> sources BMS data from more than
-                  100
-                  data points in each
-                  building to monitor and manage risk.</p>
-              </li>
-              <li class="icon-box__item">
-                <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
-                <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
-                    target="_blank">The world’s
-                    largest quick-service restaurant</a>
-                  implements smart work solutions,
-                  streamlining work-order management and space management.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="icon-box__container" id="solutions--1-4">
-          <img src="./assets/images/icon-learn-more.svg" alt="icon-learn-more" class="icon-box__img">
-          <div class="icon-box__content">
-            <p class="icon-box__title">Learn more</p>
-            <ul class="icon-box__list">
-              <li class="icon-box__item">
-                <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
-                <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
-                    target="_blank">Connected Places: Solution overview</a></p>
-              </li>
-              <li class="icon-box__item">
-                <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
-                <p class="icon-box__text"><a
-                    href="https://aws.amazon.com/blogs/apn/transforming-smart-buildings-and-facilities-with-cognizant-connected-places-on-aws/"
-                    target="_blank">Transforming smart buildings and facilities with Cognizant Connected Places on
-                    AWS</a></p>
-              </li>
-              <li class="icon-box__item">
-                <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
-                <p class="icon-box__text"><a
-                    href="https://www.cognizant.com/whitepapers/embracing-smarter-facilities-management-codex2931.pdf"
-                    target="_blank">Embracing Smarter Facilities Management</a></p>
-              </li>
-            </ul>
-          </div>
+    </div>
+    <div class="row">
+      <div class="icon-box__container" id="solutions--1-3">
+        <img src="./assets/images/icon-customer-references.svg" alt="icon-customer-references" class="icon-box__img">
+        <div class="icon-box__content">
+          <p class="icon-box__title">Customer references</p>
+          <ul class="icon-box__list">
+            <li class="icon-box__item">
+              <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
+              <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
+                  target="_blank">A leading department store </a>automates
+                energy scheduling from a
+                single point of control for 2,000 stores.</p>
+            </li>
+            <li class="icon-box__item">
+              <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
+              <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
+                  target="_blank">A national insurer</a> sources BMS data from more than
+                100
+                data points in each
+                building to monitor and manage risk.</p>
+            </li>
+            <li class="icon-box__item">
+              <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
+              <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
+                  target="_blank">The world’s
+                  largest quick-service restaurant</a>
+                implements smart work solutions,
+                streamlining work-order management and space management.</p>
+            </li>
+          </ul>
         </div>
       </div>
+      <div class="icon-box__container" id="solutions--1-4">
+        <img src="./assets/images/icon-learn-more.svg" alt="icon-learn-more" class="icon-box__img">
+        <div class="icon-box__content">
+          <p class="icon-box__title">Learn more</p>
+          <ul class="icon-box__list">
+            <li class="icon-box__item">
+              <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
+              <p class="icon-box__text"><a href="https://www.cognizant.com/Resources/connected-places.pdf"
+                  target="_blank">Connected Places: Solution overview</a></p>
+            </li>
+            <li class="icon-box__item">
+              <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
+              <p class="icon-box__text"><a
+                  href="https://aws.amazon.com/blogs/apn/transforming-smart-buildings-and-facilities-with-cognizant-connected-places-on-aws/"
+                  target="_blank">Transforming smart buildings and facilities with Cognizant Connected Places on
+                  AWS</a></p>
+            </li>
+            <li class="icon-box__item">
+              <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" class="icon-box__arrow">
+              <p class="icon-box__text"><a
+                  href="https://www.cognizant.com/whitepapers/embracing-smarter-facilities-management-codex2931.pdf"
+                  target="_blank">Embracing Smarter Facilities Management</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-      <div class="row">
-        <div class="solutions__flex" id="solutions--2">
-          <img class="solutions__num solutions__num-2" src="./assets/images/2-section.svg" alt="2-section">
-          <div class="solutions__left">
-            <h3 class="solutions__sub">Fleet management
-            </h3>
-            <p class="pg txt-white">Cloud migration offers substantial advantages to carrier fleets and railways.
-              Instead of
-              managing invisible moving parts along the supply chain, dispatchers and fleet managers who use Cognizant’s
-              fleet management solution gain stunning visibility into all aspects of operation, from vehicle and driver
-              locations to asset lifecycle insights.</p>
-          </div>
+    <div class="row">
+      <div class="solutions__flex anchor" id="solutions--2">
+        <img class="solutions__num solutions__num-2" src="./assets/images/2-section.svg" alt="2-section">
+        <div class="solutions__left">
+          <h3 class="solutions__sub">Fleet management
+          </h3>
+          <p class="pg txt-white">Cloud migration offers substantial advantages to carrier fleets and railways.
+            Instead of
+            managing invisible moving parts along the supply chain, dispatchers and fleet managers who use Cognizant’s
+            fleet management solution gain stunning visibility into all aspects of operation, from vehicle and driver
+            locations to asset lifecycle insights.</p>
         </div>
       </div>
       <div class="feature-box__wrapper" id="solutions--2-1">
@@ -745,6 +761,7 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
   <section class="contact__section">
     <div class="row">
@@ -756,7 +773,9 @@
         </div>
         <div class="contact__right">
           <!-- TODO - add reference to button -->
-          <a class="contact__btn" href="" target="_blank">Connect</a>
+          <a class="contact__btn"
+            href="https://aws.amazon.com/partners/find/partnerdetails/?n=Cognizant&id=001E000000NaBHOIA3"
+            target="_blank">Connect</a>
         </div>
       </div>
     </div>

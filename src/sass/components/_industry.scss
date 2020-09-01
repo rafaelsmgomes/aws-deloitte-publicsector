@@ -1,22 +1,29 @@
 .industry {
   &__section {
     padding-top: 3.2rem;
-    padding-bottom: 4rem;
   }
 
   &__img {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3rem;
 
     .industry__list {
       width: 30%;
       align-self: center;
+    }
+    @media only screen and (max-width: 825px) {
+      justify-content: center;
+      height: 33rem;
     }
   }
 
   // List
   &__list {
     list-style: none;
+    @media only screen and (max-width: 825px) {
+      display: none;
+    }
   }
   &__item {
     font-family: AmazonEmber;
