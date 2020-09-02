@@ -6,3 +6,8 @@ strong {
 .mb--0 {
   margin-bottom: 0 !important;
 }
+
+.pos-relative {
+  @include clearfix;
+  position: relative;
+}

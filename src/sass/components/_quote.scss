@@ -1,8 +1,8 @@
 .quote {
   &__section {
-    background-color: var(--sapphire);
-    background-image: url("../../assets/images/bg-abstract-blue.svg");
-    background-size: cover;
+    background-color: var(--dark);
+    background-image: url("../../assets/images/abstract-green.svg");
+    background-size: auto 100%;
     background-repeat: no-repeat;
 
     padding: 6rem 0;
@@ -10,9 +10,13 @@
     @media only screen and (max-width: 650px) {
       background-image: none;
     }
-    &-light {
-      background-color: var(--dark);
+    &-secondary {
+      background-color: var(--tertiary);
     }
+  }
+  &__title {
+    @include SectionHeadline;
+    color: var(--seafom-blue);
   }
   &__text {
     position: relative;

@@ -84,6 +84,9 @@
 
   &__container {
     margin-right: 6.5rem;
+    &--1 {
+      width: 35%;
+    }
     @media only screen and (max-width: 1024px) {
       margin-bottom: 3rem;
     }
@@ -135,11 +138,11 @@
     font-family: AmazonEmber;
     font-size: 1.8rem;
     font-weight: bold;
-    line-height: 2;
+    line-height: 1.33;
     letter-spacing: -0.02px;
     text-align: left;
     color: var(--light-grey);
-    margin-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
 
     p {
       margin-bottom: 0.3rem;
@@ -226,7 +229,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    border-left: 0.8rem solid var(--soft-blue);
+    border-left: 0.8rem solid var(--secondary);
     z-index: 100;
     height: fit-content;
     animation: showNav 0.25s ease-in;

@@ -182,7 +182,7 @@ function gsapColorSection(indicator, sectionIdentifier, endSection) {
         }
       }
     },
-    backgroundColor: '#527fff',
+    backgroundColor: '#16bf9f',
     ease: 'none',
     duration: .01
   })
@@ -575,12 +575,10 @@ ScrollTrigger.defaults({
 // AWS Section
 ScrollTrigger.create({
   trigger: '.industry__section',
-  endTrigger: '.quote__section--1',
   toggleClass: { targets: '.nav__item--1', className: 'active' },
 })
 ScrollTrigger.create({
   trigger: '.better-view__section',
-  endTrigger: '.quote__section--2',
   toggleClass: { targets: '.nav__item--2', className: 'active' },
 })
 ScrollTrigger.create({
@@ -659,8 +657,9 @@ ScrollTrigger.create({
 // ----------------------------------------------------------------
 
 $(document).ready(() => {
-  $('#preloader').delay(4500).fadeOut()
-  $('body').delay(4500).css('opacity', '1')
+  // FIXME - reactivate preloader animation when done dev
+  // $('#preloader').delay(4500).fadeOut()
+  // $('body').delay(4500).css('opacity', '1')
 
   if ($('body').width() <= 1024) {
     var st = $(window).scrollTop();

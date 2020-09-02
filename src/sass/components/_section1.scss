@@ -1,14 +1,17 @@
-.industry {
+.section1 {
   &__section {
     padding-top: 3.2rem;
   }
 
-  &__img {
+  &__box {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3rem;
-
-    .industry__list {
+    margin-bottom: 5rem;
+    width: 100%;
+    img {
+      width: 60%;
+    }
+    .section1__list {
       width: 30%;
       align-self: center;
     }
@@ -29,7 +32,7 @@
     font-family: AmazonEmber;
     font-size: 2.8rem;
     line-height: 1.14;
-    color: var(--soft-blue);
+    color: var(--secondary);
     display: flex;
     margin-bottom: 2rem;
     img {
