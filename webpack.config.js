@@ -6,11 +6,11 @@ module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'deloitte-financial'),
     filename: 'js/bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'deloitte-financial'),
     port: 3000
   },
   plugins: [
@@ -50,9 +50,10 @@ module.exports = {
       test: /\.html$/,
       loader: 'html-loader',
 
+
     },
     {
-      test: /\.(mp4|mov)$/,
+      test: /\.(mp4|mov|webm)$/,
       use: 'file-loader?name=videos/[name].[ext]',
     },
     {

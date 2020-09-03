@@ -18,13 +18,15 @@ const indicator4 = $('#indicator-4');
 const indicator5 = $('#indicator-5');
 const indicator6 = $('#indicator-6');
 const indicator7 = $('#indicator-7');
+const indicator8 = $('#indicator-8');
 indicator1.click(() => gsapScroll('#header'))
 indicator2.click(() => gsapScroll('.intro__section'))
-indicator3.click(() => gsapScroll('#industry'))
-indicator4.click(() => gsapScroll('#better-view'))
-indicator5.click(() => gsapScroll('.focus__section'))
-indicator6.click(() => gsapScroll('#solutions--start'));
-indicator7.click(() => gsapScroll('#solutions--2'));
+indicator3.click(() => gsapScroll('.section1__section'))
+indicator4.click(() => gsapScroll('.section2__section'))
+indicator5.click(() => gsapScroll('.section3__section'))
+indicator6.click(() => gsapScroll('.section4__section'));
+indicator7.click(() => gsapScroll('#solutions--start'));
+indicator8.click(() => gsapScrollHigher('#solutions--2'));
 
 
 $('.nav__title--1').click(() => {
@@ -32,19 +34,23 @@ $('.nav__title--1').click(() => {
   navFunc()
 })
 $('.nav__title--2').click(() => {
-  gsapScroll('.solutions__section');
+  gsapScroll('#solutions--start');
   navFunc()
 })
 $('.nav__item--aws--1').click(() => {
-  gsapScroll('.industry__section');
+  gsapScroll('.section1__section');
   navFunc()
 })
 $('.nav__item--aws--2').click(() => {
-  gsapScroll('#better-view');
+  gsapScroll('.section2__section');
   navFunc()
 })
 $('.nav__item--aws--3').click(() => {
-  gsapScroll('.focus__section');
+  gsapScroll('.section3__section');
+  navFunc()
+});
+$('.nav__item--aws--4').click(() => {
+  gsapScroll('.section4__section');
   navFunc()
 });
 
@@ -120,11 +126,12 @@ function gsapScrollHigher(id) {
 
 gsapColorSection(indicator1, '#header', '.video__section')
 gsapColorSection(indicator2, '.intro__section')
-gsapColorSection(indicator3, '#industry')
-gsapColorSection(indicator4, '#better-view')
-gsapColorSection(indicator5, '.focus__section')
-gsapColorSection(indicator6, '#solutions--start', '#solutions--1-4')
-gsapColorSection(indicator7, '#solutions--2', '#solutions--2-4')
+gsapColorSection(indicator3, '.section1__section')
+gsapColorSection(indicator4, '.section2__section')
+gsapColorSection(indicator5, '.section3__section')
+gsapColorSection(indicator6, '.section4__section')
+gsapColorSection(indicator7, '#solutions--start', '#solutions--1-4')
+gsapColorSection(indicator8, '#solutions--2', '#solutions--2-4')
 
 // ------------- Arrow functions ------------- 
 $('.sidebar-nav__navigation--prev').click(() => gsapScroll('.arrow-prev'))
@@ -151,25 +158,30 @@ function gsapColorSection(indicator, sectionIdentifier, endSection) {
           } else if (self.vars.trigger === '.intro__section') {
             $('.anchor').removeClass('arrow-next arrow-prev');
             $('#header').addClass('arrow-prev');
-            $('#industry').addClass('arrow-next')
-          } else if (self.vars.trigger === '#industry') {
+            $('.section1__section').addClass('arrow-next')
+          } else if (self.vars.trigger === '.section1__section') {
             $('.anchor').removeClass('arrow-next arrow-prev');
             $('.intro__section').addClass('arrow-prev')
-            $('#better-view').addClass('arrow-next')
+            $('.section2__section').addClass('arrow-next')
 
-          } else if (self.vars.trigger === '#better-view') {
+          } else if (self.vars.trigger === '.section2__section') {
             $('.anchor').removeClass('arrow-next arrow-prev');
-            $('#industry').addClass('arrow-prev');
-            $('.focus__section').addClass('arrow-next')
+            $('.section1__section').addClass('arrow-prev');
+            $('.section3__section').addClass('arrow-next')
 
-          } else if (self.vars.trigger === '.focus__section') {
+          } else if (self.vars.trigger === '.section3__section') {
             $('.anchor').removeClass('arrow-next arrow-prev');
-            $('#better-view').addClass('arrow-prev');
+            $('.section2__section').addClass('arrow-prev');
+            $('.section4__section').addClass('arrow-next')
+
+          } else if (self.vars.trigger === '.section4__section') {
+            $('.anchor').removeClass('arrow-next arrow-prev');
+            $('.section3__section').addClass('arrow-prev');
             $('#solutions--start').addClass('arrow-next')
 
           } else if (self.vars.trigger === '#solutions--start') {
             $('.anchor').removeClass('arrow-next arrow-prev');
-            $('.focus__section').addClass('arrow-prev');
+            $('.section4__section').addClass('arrow-prev');
             $('#solutions--2').addClass('arrow-next')
 
           } else if (self.vars.trigger === '#solutions--2') {
@@ -294,46 +306,46 @@ whyTl.from('.intro__text', {
 }, '-=.5')
 
 // ----------------------------------------------------------------
-// Animate Industry Section
+// Animate Section 1
 // ----------------------------------------------------------------
 
-const industryTL1 = gsap.timeline({
+const section1TL1 = gsap.timeline({
   scrollTrigger: {
-    trigger: '.industry__section',
+    trigger: '.section1__section',
     start: 'top 70%'
   },
 })
-industryTL1.from('.industry__section .header__secondary', {
+section1TL1.from('.section1__section .header__secondary', {
   opacity: 0,
   x: '-20%',
   duration: 1
 })
-industryTL1.from('.industry__section .pg', {
+section1TL1.from('.section1__section .pg', {
   opacity: 0,
   duration: 1,
   stagger: .25
 }, '-=.5')
 
 // Main Animation
-const industryTL2 = gsap.timeline({
+const section1TL2 = gsap.timeline({
   scrollTrigger: {
-    trigger: '.industry__img',
+    trigger: '.section1__box',
     start: 'top 70%',
     toggleActions: 'play none none reverse'
   },
 })
-industryTL2.from("#graphic-manufacturing", {
+section1TL2.from(".section1__img", {
   opacity: 0,
   // drawSVG: '0%',
   duration: 1,
 })
-industryTL2.from('.industry__item', {
+section1TL2.from('.section1__item', {
   x: '-10%',
   stagger: .3,
   opacity: 0,
   duration: 1,
 }, '-=.75')
-industryTL2.from('.industry__item img', {
+section1TL2.from('.section1__item img', {
   rotate: '-180',
   stagger: .3,
   opacity: 0,
@@ -357,28 +369,63 @@ gsap.timeline({
 }, '-=.5')
 
 // ----------------------------------------------------------------
-// Animate Second Section of AWS
+// Animate Section 2
 // ----------------------------------------------------------------
 
 const secondSectionTL = gsap.timeline({
   scrollTrigger: {
-    trigger: '.better-view__section',
+    trigger: '.section2__section',
     start: 'top 70%'
   },
 })
-secondSectionTL.from('.better-view__header', {
+secondSectionTL.from('.section2__header', {
   opacity: 0,
   x: '-20%',
   duration: 1
 })
-secondSectionTL.from('.better-view__section .pg', {
+secondSectionTL.from('.section2__section .pg', {
+  opacity: 0,
+  duration: 1,
+  stagger: .25
+}, '-=.5')
+
+gsap.from('.section2__img', {
+  duration: 1.5,
+  opacity: 0,
+  x: 100,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.section2__img',
+    start: 'top 70%',
+    toggleActions: 'play none none reverse'
+  }
+})
+
+
+
+// ----------------------------------------------------------------
+// Animate Section 3
+// ----------------------------------------------------------------
+
+const thirdSectionTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.section3__section',
+    start: 'top 70%'
+  },
+})
+thirdSectionTL.from('.section3__section .header__secondary', {
+  opacity: 0,
+  x: '-20%',
+  duration: 1
+})
+thirdSectionTL.from('.section3__section .pg', {
   opacity: 0,
   duration: 1,
   stagger: .25
 }, '-=.5')
 
 // ----------------------------------------------------------------
-// Animate Quote Section-2
+// Animate Section 4
 // ----------------------------------------------------------------
 
 gsap.timeline({
@@ -393,38 +440,6 @@ gsap.timeline({
   duration: 1,
 }, '-=.5')
 
-
-// ----------------------------------------------------------------
-// Animate Third Section of AWS
-// ----------------------------------------------------------------
-
-const thirdSectionTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.focus__section',
-    start: 'top 70%'
-  },
-})
-thirdSectionTL.from('.focus__section .header__secondary', {
-  opacity: 0,
-  x: '-20%',
-  duration: 1
-})
-thirdSectionTL.from('.focus__section .pg', {
-  opacity: 0,
-  duration: 1,
-  stagger: .25
-}, '-=.5')
-
-gsap.from('.focus__img *', {
-  duration: 2,
-  drawSVG: '0%',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.focus__img',
-    start: 'top center',
-    toggleActions: 'play none none reverse'
-  }
-})
 
 // ----------------------------------------------------------------
 // Animate First Section Intro of Partner
@@ -574,16 +589,20 @@ ScrollTrigger.defaults({
 
 // AWS Section
 ScrollTrigger.create({
-  trigger: '.industry__section',
+  trigger: '.section1__section',
   toggleClass: { targets: '.nav__item--1', className: 'active' },
 })
 ScrollTrigger.create({
-  trigger: '.better-view__section',
+  trigger: '.section2__section',
   toggleClass: { targets: '.nav__item--2', className: 'active' },
 })
 ScrollTrigger.create({
-  trigger: '.focus__section',
+  trigger: '.section3__section',
   toggleClass: { targets: '.nav__item--3', className: 'active' },
+})
+ScrollTrigger.create({
+  trigger: '.section4__section',
+  toggleClass: { targets: '.nav__item--4', className: 'active' },
 })
 
 // Solutions Sections
@@ -591,14 +610,14 @@ ScrollTrigger.create({
   trigger: '#solutions--start',
   endTrigger: '#solutions--1-1',
   end: 'top 20%',
-  toggleClass: { targets: '.nav__item--4', className: 'active' },
+  toggleClass: { targets: '.nav__item--5', className: 'active' },
   // markers: true
 })
 ScrollTrigger.create({
   trigger: '#solutions--2',
   endTrigger: '#solutions--2-1',
   end: 'top 20%',
-  toggleClass: { targets: '.nav__item--5', className: 'active' },
+  toggleClass: { targets: '.nav__item--6', className: 'active' },
   // markers: true
 })
 
@@ -657,9 +676,9 @@ ScrollTrigger.create({
 // ----------------------------------------------------------------
 
 $(document).ready(() => {
-  // FIXME - reactivate preloader animation when done dev
-  // $('#preloader').delay(4500).fadeOut()
-  // $('body').delay(4500).css('opacity', '1')
+  //  - reactivate preloader animation when done dev
+  $('#preloader').delay(4500).fadeOut()
+  $('body').delay(4500).css('opacity', '1')
 
   if ($('body').width() <= 1024) {
     var st = $(window).scrollTop();

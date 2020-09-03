@@ -1,15 +1,14 @@
 .video {
   &__section {
-    height: 85vh;
+    height: 80vh;
     position: relative;
     overflow: hidden;
-    background-image: url("../../assets/images/cognizant-manufacturing-2.jpg");
+    background-image: url("../../assets/images/deloitte-financial.jpg");
     background-position: bottom;
     background-size: cover;
     @media only screen and (max-width: 1024px) {
-      // TODO - test different heights on tablet and mobile
-      // height: 60vh;
       background-position: center;
+      height: 65vh;
     }
     @media only screen and (max-width: 700px) {
       height: 60vh;
@@ -69,6 +68,7 @@
     text-align: center;
     color: #ffffff;
     letter-spacing: 0.6px;
+    margin-bottom: 2rem;
 
     @media only screen and (max-width: 800px) {
       font-size: 4rem;
@@ -80,6 +80,7 @@
   &__sub {
     font-weight: normal;
     font-size: 3.6rem;
+
     letter-spacing: 0.3px;
     @media only screen and (max-width: 800px) {
       font-size: 2.7rem;
@@ -101,7 +102,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center;
     z-index: -1;
   }
 }

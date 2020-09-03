@@ -20,8 +20,6 @@
   }
 
   // right side
-  &__content {
-  }
   &__title {
     font-family: AmazonEmber;
     font-size: 3.6rem;
@@ -55,7 +53,7 @@
     text-align: left;
     color: #fff;
     a {
-      color: var(--carolina-blue);
+      color: var(--seafom-blue);
       text-decoration: none;
       &:hover {
         text-decoration: underline;

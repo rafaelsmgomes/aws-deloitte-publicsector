@@ -3,4 +3,23 @@
     background-color: var(--blue-grey);
     height: 38rem;
   }
+
+  &__container {
+    padding: 3rem 0;
+    font-family: AmazonEmber;
+    font-size: 2.1rem;
+    line-height: 2.06;
+    letter-spacing: 0.21px;
+    text-align: left;
+    color: var(--dark-grey-blue);
+  }
+  &__text {
+    a {
+      text-decoration: none;
+      color: var(--dark-grey-blue);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

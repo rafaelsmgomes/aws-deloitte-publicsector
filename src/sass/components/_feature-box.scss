@@ -6,7 +6,7 @@
     height: 1rem;
     content: "";
     display: block;
-    background-color: var(--soft-blue);
+    background-color: var(--secondary);
   }
   &__container {
     background-color: var(--ice);
@@ -70,9 +70,6 @@
     line-height: 1.33;
     letter-spacing: 0.21px;
     margin-bottom: 2rem;
-    // @media only screen and (max-width: 775px) {
-    //   display: flex;
-    // }
 
     &:last-of-type {
       margin-bottom: 0;
