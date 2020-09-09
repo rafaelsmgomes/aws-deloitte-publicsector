@@ -15,7 +15,7 @@
 
   // Left side of flexbox
   &__left {
-    font-family: AmazonEmber;
+    font-family: $font-rg;
     color: #ffffff;
     @media only screen and (max-width: 500px) {
       margin-bottom: 2rem;
@@ -40,7 +40,7 @@
   &__btn {
     background-color: orange;
     padding: 0.5rem 6rem;
-    font-family: AmazonEmber;
+    font-family: $font-bd;
     font-weight: bold;
     font-size: 1.5rem;
     color: black;

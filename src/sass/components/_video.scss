@@ -6,8 +6,8 @@
     background-image: url("../../assets/images/deloitte-financial.jpg");
     background-position: bottom;
     background-size: cover;
-    @media only screen and (min-width: 1400px) {
-      height: 55vh;
+    @media only screen and (min-width: 1450px) {
+      height: 70vh;
     }
     @media only screen and (max-width: 1024px) {
       background-position: center;
@@ -40,11 +40,11 @@
   &__text-box {
     width: 131rem;
     position: absolute;
-    top: 30%;
+    margin-top: 5rem;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: AmazonEmber;
-    font-weight: bold;
+    transform: translateX(-50%);
+    font-family: $font-bd;
     font-stretch: normal;
     font-style: normal;
     text-align: center;
@@ -81,7 +81,7 @@
     }
   }
   &__sub {
-    font-weight: normal;
+    font-family: $font-rg;
     font-size: 3.6rem;
 
     letter-spacing: 0.3px;
