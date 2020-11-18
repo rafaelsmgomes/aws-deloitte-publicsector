@@ -4,12 +4,8 @@ import $ from 'jquery';
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, DrawSVGPlugin);
-
-// FIXME - should wrap everything inside a document ready function
-// $(document).ready() 
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 const indicator1 = $('#indicator-1');
 const indicator2 = $('#indicator-2');
@@ -137,8 +133,6 @@ gsapColorSection(indicator8, '#solutions--2', '#solutions--2-4')
 $('.sidebar-nav__navigation--prev').click(() => gsapScroll('.arrow-prev'))
 $('.sidebar-nav__navigation--next').click(() => gsapScroll('.arrow-next'))
 
-// $('.sidebar-nav__arrowDown').click(() => { gsapScroll('.intro__section') })
-var position = 1
 function gsapColorSection(indicator, sectionIdentifier, endSection) {
   gsap.to(
     indicator, {
@@ -229,8 +223,6 @@ function addStickyNav() {
   }
 }
 
-// Hamburger Icon functionality - below 1024px 
-// TODO - implement touch screen detection for media queries
 $('.hamburger-icon').click(() => {
   $('.menu-dd').toggleClass('active')
   $('.hamburger-icon').toggleClass('active')

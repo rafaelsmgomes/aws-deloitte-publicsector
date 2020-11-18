@@ -4,7 +4,7 @@
     background-image: url("../../assets/images/bg-top-main.svg");
     background-size: cover;
     color: #fff;
-    padding-top: 8.2rem;
+    padding-top: 13rem;
     height: 80rem;
     position: relative;
     @media only screen and (max-width: 1024px) {
@@ -13,10 +13,10 @@
     }
   }
   &__logo {
-    width: 33.3rem;
+    width: 34.23rem;
     height: 6.4rem;
     object-fit: contain;
-    margin-bottom: 13.4rem;
+    margin-bottom: 13.3rem;
     @media only screen and (max-width: 1024px) {
       margin-top: 9.8rem;
       margin-bottom: 9.2rem;
@@ -27,9 +27,9 @@
   }
   &__title {
     font-family: $font-lt;
-    font-size: 7.9rem;
-    // font-weight: 300;
-    line-height: 1.28;
+    font-size: 6.4rem;
+    font-weight: 300;
+    line-height: 1.19;
     color: var(--white);
     @media only screen and (max-width: 400px) {
       font-size: 6.3rem;
@@ -37,6 +37,7 @@
 
     margin-bottom: 37.5rem;
     @media only screen and (max-width: 1024px) {
+      letter-spacing: auto;
       margin-bottom: 29.7rem;
     }
   }
