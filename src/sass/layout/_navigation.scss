@@ -238,6 +238,24 @@
       &:hover {
         color: var(--yellowish-orange);
       }
+
+      &.active {
+        position: relative;
+        // color: var(--yellowish-orange);
+        &:before {
+          position: absolute;
+          width: 0.75rem;
+          height: 0.75rem;
+          background-color: var(--yellowish-orange);
+          content: "";
+          display: block;
+          top: 50%;
+          transform: translate(-100%, -50%);
+          left: -0.5rem;
+          // border-radius: 50%;
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+        }
+      }
     }
   }
 }
