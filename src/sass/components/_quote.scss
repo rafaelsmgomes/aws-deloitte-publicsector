@@ -7,7 +7,9 @@
     // background-repeat: no-repeat;
 
     padding: 6rem 0;
-
+    &--1 {
+      margin-bottom: 5rem;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -42,6 +44,14 @@
     line-height: 1.33;
     color: #ffffff;
 
+    a {
+      font-family: $font-bd;
+      color: var(--seafom-blue);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     @media only screen and (max-width: 825px) {
       width: 85%;
     }
@@ -57,10 +67,10 @@
       content: "";
       position: absolute;
       left: -5.8rem;
-      height: 105%;
+      height: calc(100% + 6rem);
       width: 0.4rem;
       background-color: white;
-      top: -3%;
+      top: -3rem;
       @media only screen and (max-width: 500px) {
         left: 0rem;
         height: 102.5%;

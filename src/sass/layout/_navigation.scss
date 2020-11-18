@@ -221,6 +221,25 @@
       }
     }
   }
+  &__intro-sub {
+    &__list {
+      list-style: none;
+      margin-bottom: 1rem;
+      margin-left: 1.3rem;
+    }
+    &__item {
+      font-family: $font-lt;
+      font-size: 1.8rem;
+      line-height: 2;
+      letter-spacing: -0.02px;
+      color: var(--light-grey);
+
+      cursor: pointer;
+      &:hover {
+        color: var(--yellowish-orange);
+      }
+    }
+  }
 }
 
 .sticky {

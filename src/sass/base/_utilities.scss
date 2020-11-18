@@ -6,6 +6,15 @@ strong {
 .mb--0 {
   margin-bottom: 0 !important;
 }
+.mb--1 {
+  margin-bottom: 1rem !important;
+}
+.mb--2 {
+  margin-bottom: 2rem !important;
+}
+.mb--3 {
+  margin-bottom: 3rem !important;
+}
 .pos-relative {
   @include clearfix;
   position: relative;

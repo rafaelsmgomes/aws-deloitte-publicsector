@@ -22,6 +22,10 @@
   &__secondary {
     @include SectionHeadline;
   }
+  &__tertiary {
+    @include SectionHeadline;
+    font-size: 3.2rem;
+  }
 }
 
 .pg {
