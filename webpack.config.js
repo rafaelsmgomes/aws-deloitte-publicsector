@@ -6,11 +6,11 @@ module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
   output: {
-    path: path.join(__dirname, 'deloitte-financial'),
+    path: path.join(__dirname, 'deloitte-publicsector'),
     filename: 'js/bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, 'deloitte-financial'),
+    contentBase: path.join(__dirname, 'deloitte-publicsector'),
     port: 3000
   },
   plugins: [
