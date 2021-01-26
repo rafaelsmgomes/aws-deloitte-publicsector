@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack",
-    "build": "webpack --mode production",
+    "build": "webpack --env production --mode production",
     "start": "webpack-dev-server --mode development --watch-poll"
   },
   "author": "Rafael Gomes",
@@ -17,6 +17,7 @@
     "babel-loader": "^8.1.0",
     "concat": "^1.0.3",
     "core-js": "^3.6.5",
+    "csp-html-webpack-plugin": "^5.0.1",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
@@ -34,6 +35,7 @@
   },
   "dependencies": {
     "gsap": "file:gsap-bonus.tgz",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "magnific-popup": "^1.1.0"
   }
 }

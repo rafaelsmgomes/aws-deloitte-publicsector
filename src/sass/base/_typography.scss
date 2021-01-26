@@ -1,19 +1,7 @@
-@font-face {
-  font-family: AmazonEmber_Rg;
-  src: url("../../fonts/AmazonEmber_Rg.ttf");
-  font-weight: normal;
+p {
+  font-family: inherit;
+  font-size: inherit;
 }
-@font-face {
-  font-family: AmazonEmber_Lt;
-  src: url("../../fonts/AmazonEmber_Lt.ttf");
-  font-weight: 300;
-}
-@font-face {
-  font-family: AmazonEmber_Bd;
-  src: url("../../fonts/AmazonEmber_Bd.ttf");
-  font-weight: bold;
-}
-
 .header {
   &__primary {
     @include SectionHeadline;

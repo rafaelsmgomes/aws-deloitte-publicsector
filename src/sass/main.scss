@@ -1,3 +1,5 @@
+@import "./vendor/magnific-popup.scss";
+
 @import "abstracts/reset";
 @import "abstracts/functions";
 @import "./abstracts/mixins";
@@ -5,31 +7,34 @@
 
 @import "./base/animations";
 @import "./base/base";
-@import "./base/typography";
 
-@import "./sections/del-ps__aws";
+#del {
+  @import "./base/typography";
 
-@import "./components/contact";
-@import "./components/feature-box";
-@import "./components/header";
-@import "./components/icon-box";
-@import "./components/images";
-@import "./components/intro";
-@import "./components/preloader";
-@import "./components/quote";
-@import "./components/section1";
-@import "./components/section2";
-@import "./components/section3";
-@import "./components/sidebar-nav";
-@import "./components/solutions";
-@import "./components/video";
+  @import "./sections/del-ps__aws";
 
-@import "./layout/footer";
-@import "./layout/grid";
-@import "./layout/navigation";
+  @import "./components/contact";
+  @import "./components/feature-box";
+  @import "./components/header";
+  @import "./components/icon-box";
+  @import "./components/images";
+  @import "./components/intro";
+  @import "./components/preloader";
+  @import "./components/quote";
+  @import "./components/section1";
+  @import "./components/section2";
+  @import "./components/section3";
+  @import "./components/sidebar-nav";
+  @import "./components/solutions";
+  @import "./components/video";
 
-// last because of hierarchy of selection
-@import "./base/utilities";
+  @import "./layout/footer";
+  @import "./layout/grid";
+  @import "./layout/navigation";
+
+  // last because of hierarchy of selection
+  @import "./base/utilities";
+}
 
 * {
   // outline: 1px solid hotpink;

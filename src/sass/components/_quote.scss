@@ -21,6 +21,9 @@
       background-size: auto 100%;
       background-repeat: no-repeat;
       opacity: 0.5;
+      @media only screen and (max-width: 825px) {
+        opacity: 0.25;
+      }
     }
     @media only screen and (max-width: 650px) {
       background-image: none;
